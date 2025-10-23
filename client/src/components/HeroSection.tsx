@@ -2,7 +2,7 @@ import heroImage from "@assets/generated_images/Educational_campus_hero_image_e8
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[500px] md:h-[600px] overflow-hidden">
+    <section className="relative h-[280px] md:h-[320px] overflow-hidden">
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroImage})` }}
@@ -12,10 +12,10 @@ export default function HeroSection() {
       
       <div className="relative h-full flex items-center justify-center px-4">
         <div className="text-center max-w-4xl">
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
             Tu futuro empieza aquí
           </h2>
-          <p className="text-lg md:text-xl text-white/95 font-medium drop-shadow-md">
+          <p className="text-base md:text-lg text-white/95 font-medium drop-shadow-md">
             Institución Educativa Oreste Sindici
           </p>
         </div>
