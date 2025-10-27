@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logoImage from "@assets/Imagen de WhatsApp 2025-10-27 a las 09.19.14_428f6094_1761600054984.jpg";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,9 +19,11 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 gap-4">
           <Link href="/" className="hover-elevate active-elevate-2 rounded-md">
             <a className="flex items-center gap-3 px-3 py-2" data-testid="link-home">
-              <div className="w-10 h-10 bg-foreground rounded-full flex items-center justify-center">
-                <span className="text-background font-bold text-lg">OS</span>
-              </div>
+              <img 
+                src={logoImage} 
+                alt="Escudo Institución Educativa Oreste Sindici" 
+                className="w-12 h-12 object-contain"
+              />
               <div className="hidden sm:block">
                 <h1 className="font-semibold text-sm leading-tight text-foreground">INSTITUCIÓN EDUCATIVA</h1>
                 <p className="text-xs opacity-90 text-foreground">Oreste Sindici</p>
