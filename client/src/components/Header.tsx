@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-chart-4 text-foreground shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center h-16">
+        <div className="flex items-center justify-between h-16">
           <Link href="/" className="hover-elevate active-elevate-2 rounded-md">
             <a className="flex items-center gap-3 px-3 py-2" data-testid="link-home">
               <img 
@@ -19,6 +19,14 @@ export default function Header() {
               </div>
             </a>
           </Link>
+          
+          <button
+            onClick={() => console.log('Registrarse clicked')}
+            className="px-6 min-h-9 rounded-md bg-foreground text-background font-medium hover-elevate active-elevate-2"
+            data-testid="button-register"
+          >
+            Registrarse
+          </button>
         </div>
       </div>
     </header>
