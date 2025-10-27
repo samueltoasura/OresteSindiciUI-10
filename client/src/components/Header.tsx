@@ -22,7 +22,7 @@ export default function Header() {
           
           <button
             onClick={() => console.log('Registrarse clicked')}
-            className="px-6 min-h-9 rounded-md bg-foreground text-background font-medium hover-elevate active-elevate-2"
+            className="px-6 min-h-9 rounded-md bg-chart-2 text-white font-medium hover-elevate active-elevate-2"
             data-testid="button-register"
           >
             Registrarse
