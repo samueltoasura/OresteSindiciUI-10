@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logoImage from "@assets/Imagen de WhatsApp 2025-10-27 a las 09.19.14_428f6094_1761600054984.jpg";
+import logoImage from "@assets/Adobe Express - file_1761600268000.png";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
