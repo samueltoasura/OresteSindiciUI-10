@@ -73,7 +73,7 @@
   --chart-1: 210 90% 55%;
   --chart-2: 140 75% 45%;
   --chart-3: 270 70% 55%;
-  --chart-4: 45 95% 55%;
+  --chart-4: 60 100% 50%;
   --chart-5: 0 85% 50%;
 
   --font-sans: Open Sans, sans-serif;
@@ -191,7 +191,7 @@
   --chart-1: 210 90% 65%;
   --chart-2: 140 75% 55%;
   --chart-3: 270 70% 65%;
-  --chart-4: 45 95% 65%;
+  --chart-4: 60 100% 50%;
   --chart-5: 0 85% 60%;
 
   --shadow-2xs: 0px 2px 0px 0px hsl(220 20% 5% / 0.20);
