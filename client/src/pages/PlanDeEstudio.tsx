@@ -31,7 +31,7 @@ export default function PlanDeEstudio() {
                 <div className="w-12 h-12 rounded-full bg-chart-1 flex items-center justify-center flex-shrink-0">
                   <Calendar className="w-6 h-6 text-white" />
                 </div>
-                <CardTitle>Educación Primaria</CardTitle>
+                <CardTitle>Planes de Estudio</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
