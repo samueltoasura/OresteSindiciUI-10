@@ -46,7 +46,7 @@ export default function PlanDeEstudio() {
                 <div className="w-12 h-12 rounded-full bg-chart-2 flex items-center justify-center flex-shrink-0">
                   <Award className="w-6 h-6 text-white" />
                 </div>
-                <CardTitle>Educación Secundaria</CardTitle>
+                <CardTitle>Sistema de Evaluación</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
