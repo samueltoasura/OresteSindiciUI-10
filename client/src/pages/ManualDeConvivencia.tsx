@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { FileText, Heart, Shield, Scale } from "lucide-react";
+import { FileText } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function ManualDeConvivencia() {
@@ -23,50 +23,6 @@ export default function ManualDeConvivencia() {
               El manual de convivencia establece las normas, derechos y deberes de todos los miembros 
               de nuestra comunidad educativa.
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <Card className="hover-elevate">
-              <CardHeader>
-                <div className="w-12 h-12 rounded-full bg-destructive flex items-center justify-center mb-3">
-                  <Heart className="w-6 h-6 text-white" />
-                </div>
-                <CardTitle>Respeto</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Promovemos un ambiente de respeto mutuo entre todos los miembros de la comunidad educativa.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="hover-elevate">
-              <CardHeader>
-                <div className="w-12 h-12 rounded-full bg-destructive flex items-center justify-center mb-3">
-                  <Shield className="w-6 h-6 text-white" />
-                </div>
-                <CardTitle>Responsabilidad</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Fomentamos la responsabilidad personal y el compromiso con el aprendizaje y la convivencia.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="hover-elevate">
-              <CardHeader>
-                <div className="w-12 h-12 rounded-full bg-destructive flex items-center justify-center mb-3">
-                  <Scale className="w-6 h-6 text-white" />
-                </div>
-                <CardTitle>Justicia</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Garantizamos procesos justos y equitativos en la resolución de conflictos y situaciones disciplinarias.
-                </p>
-              </CardContent>
-            </Card>
           </div>
 
           <Card>
