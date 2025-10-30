@@ -9,11 +9,13 @@ import {
 import image1 from "@assets/Imagen de WhatsApp 2025-10-27 a las 09.41.19_88811b78_1761857710375.jpg";
 import image2 from "@assets/Imagen de WhatsApp 2025-10-27 a las 09.42.45_42054d23_1761859686019.jpg";
 import image3 from "@assets/Imagen de WhatsApp 2025-10-27 a las 09.42.58_04330c74_1761857710376.jpg";
+import image4 from "@assets/Imagen de WhatsApp 2025-10-30 a las 09.37.58_cf9fa9bd_1761860326109.jpg";
 
 const slides = [
   { id: 1, image: image1, alt: "Ceremonia institucional con estudiantes" },
   { id: 2, image: image2, alt: "Evento institucional con comunidad" },
   { id: 3, image: image3, alt: "Acto cívico estudiantil" },
+  { id: 4, image: image4, alt: "Presentación estudiantil" },
 ];
 
 export default function HeroSection() {
