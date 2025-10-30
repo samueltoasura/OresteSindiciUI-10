@@ -60,11 +60,8 @@ export default function NavigationButtons() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
-            Oferta Formativa de Oreste Sindici
+            EXPLORA NUESTRA INSTITUCIÓN
           </h2>
-          <p className="text-base text-muted-foreground max-w-2xl mx-auto">
-            Explora nuestros recursos educativos y servicios institucionales
-          </p>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8">
