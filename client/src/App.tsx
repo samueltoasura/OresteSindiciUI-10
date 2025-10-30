@@ -11,6 +11,7 @@ import Noticias from "@/pages/Noticias";
 import PlataformaDeNotas from "@/pages/PlataformaDeNotas";
 import Proyectos from "@/pages/Proyectos";
 import SistemaEvaluacion from "@/pages/SistemaEvaluacion";
+import PlanesEstudio from "@/pages/PlanesEstudio";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -24,6 +25,7 @@ function Router() {
       <Route path="/plataforma-de-notas" component={PlataformaDeNotas} />
       <Route path="/proyectos" component={Proyectos} />
       <Route path="/sistema-evaluacion" component={SistemaEvaluacion} />
+      <Route path="/planes-estudio" component={PlanesEstudio} />
       <Route component={NotFound} />
     </Switch>
   );

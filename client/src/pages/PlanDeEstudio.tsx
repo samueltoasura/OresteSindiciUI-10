@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { BookOpen, Calendar, Award, Users } from "lucide-react";
+import { BookOpen, Calendar, Award } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 
@@ -27,20 +27,22 @@ export default function PlanDeEstudio() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 mb-12">
-            <Card className="hover-elevate" data-testid="card-planes-estudio">
-              <CardHeader className="flex flex-row items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-chart-1 flex items-center justify-center flex-shrink-0">
-                  <Calendar className="w-6 h-6 text-white" data-testid="icon-calendar" />
-                </div>
-                <CardTitle data-testid="heading-planes-estudio">Planes de Estudio</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground" data-testid="text-planes-estudio">
-                  Grados 1° a 5°. Enfoque en fundamentos académicos, desarrollo de habilidades básicas 
-                  y formación en valores.
-                </p>
-              </CardContent>
-            </Card>
+            <Link href="/planes-estudio">
+              <Card className="hover-elevate cursor-pointer" data-testid="card-planes-estudio">
+                <CardHeader className="flex flex-row items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-chart-1 flex items-center justify-center flex-shrink-0">
+                    <Calendar className="w-6 h-6 text-white" data-testid="icon-calendar" />
+                  </div>
+                  <CardTitle data-testid="heading-planes-estudio">Planes de Estudio</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground" data-testid="text-planes-estudio">
+                    Grados 1° a 5°. Enfoque en fundamentos académicos, desarrollo de habilidades básicas 
+                    y formación en valores.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
 
             <Link href="/sistema-evaluacion">
               <Card className="hover-elevate cursor-pointer" data-testid="card-sistema-evaluacion">
@@ -58,38 +60,6 @@ export default function PlanDeEstudio() {
               </Card>
             </Link>
           </div>
-
-          <Card data-testid="card-areas-conocimiento">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-3" data-testid="heading-areas-conocimiento">
-                <Users className="w-6 h-6" data-testid="icon-users" />
-                Áreas de Conocimiento
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {[
-                  "Matemáticas",
-                  "Ciencias Naturales",
-                  "Ciencias Sociales",
-                  "Lengua Castellana",
-                  "Inglés",
-                  "Educación Física",
-                  "Artes",
-                  "Tecnología e Informática",
-                  "Ética y Valores"
-                ].map((area) => (
-                  <div 
-                    key={area} 
-                    className="p-4 rounded-md bg-muted hover-elevate active-elevate-2"
-                    data-testid={`area-${area.toLowerCase().replace(/\s+/g, '-')}`}
-                  >
-                    <p className="font-medium text-foreground">{area}</p>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </main>
 
