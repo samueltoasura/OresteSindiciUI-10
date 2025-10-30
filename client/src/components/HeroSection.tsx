@@ -6,10 +6,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import image1 from "@assets/Imagen de WhatsApp 2025-10-27 a las 09.41.19_88811b78_1761857710375.jpg";
-import image2 from "@assets/Imagen de WhatsApp 2025-10-27 a las 09.42.45_42054d23_1761859686019.jpg";
-import image3 from "@assets/slide3.jpg";
-import image4 from "@assets/slide4.jpg";
+import image1 from "@assets/1.jpg";
+import image2 from "@assets/2.jpg";
+import image3 from "@assets/3.jpg";
+import image4 from "@assets/4.jpg";
 
 const slides = [
   { id: 1, image: image1, alt: "Ceremonia institucional con estudiantes" },
