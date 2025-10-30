@@ -30,18 +30,20 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-chart-4 text-foreground shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="hover-elevate active-elevate-2 rounded-md">
-            <a className="flex items-center gap-3 px-3 py-2" data-testid="link-home">
-              <img 
-                src={logoImage} 
-                alt="Escudo Institución Educativa Oreste Sindici" 
-                className="w-12 h-12 object-contain"
-              />
-              <div className="hidden sm:block">
-                <h1 className="font-semibold text-sm leading-tight text-foreground">INSTITUCIÓN EDUCATIVA</h1>
-                <p className="text-xs opacity-90 text-foreground">Oreste Sindici</p>
-              </div>
-            </a>
+          <Link 
+            href="/" 
+            className="flex items-center gap-3 px-3 py-2 hover-elevate active-elevate-2 rounded-md"
+            data-testid="link-home"
+          >
+            <img 
+              src={logoImage} 
+              alt="Escudo Institución Educativa Oreste Sindici" 
+              className="w-12 h-12 object-contain"
+            />
+            <div className="hidden sm:block">
+              <h1 className="font-semibold text-sm leading-tight text-foreground">INSTITUCIÓN EDUCATIVA</h1>
+              <p className="text-xs opacity-90 text-foreground">Oreste Sindici</p>
+            </div>
           </Link>
           
           <button

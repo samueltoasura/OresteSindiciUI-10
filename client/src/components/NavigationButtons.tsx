@@ -69,25 +69,25 @@ export default function NavigationButtons() {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8">
           {navigationButtons.map((button) => (
-            <Link key={button.id} href={button.path}>
-              <a 
-                className="flex flex-col items-center group"
-                data-testid={`link-${button.id}`}
-              >
-                <div className={`
-                  w-24 h-24 md:w-28 md:h-28 rounded-full ${button.color} 
-                  flex items-center justify-center
-                  transition-all duration-300 ease-out
-                  group-hover:scale-110 group-hover:shadow-2xl
-                  group-active:scale-105
-                  shadow-lg
-                `}>
-                  <button.icon className="w-10 h-10 md:w-12 md:h-12 text-white" />
-                </div>
-                <h3 className="mt-3 text-sm md:text-base font-semibold text-foreground text-center group-hover:text-primary transition-colors">
-                  {button.title}
-                </h3>
-              </a>
+            <Link 
+              key={button.id} 
+              href={button.path}
+              className="flex flex-col items-center group"
+              data-testid={`link-${button.id}`}
+            >
+              <div className={`
+                w-24 h-24 md:w-28 md:h-28 rounded-full ${button.color} 
+                flex items-center justify-center
+                transition-all duration-300 ease-out
+                group-hover:scale-110 group-hover:shadow-2xl
+                group-active:scale-105
+                shadow-lg
+              `}>
+                <button.icon className="w-10 h-10 md:w-12 md:h-12 text-white" />
+              </div>
+              <h3 className="mt-3 text-sm md:text-base font-semibold text-foreground text-center group-hover:text-primary transition-colors">
+                {button.title}
+              </h3>
             </Link>
           ))}
         </div>
