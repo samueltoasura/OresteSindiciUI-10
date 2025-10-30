@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { BookOpen, Calendar, Award } from "lucide-react";
+import { BookOpen, Calendar, Award, FileText } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 
@@ -26,7 +26,7 @@ export default function PlanDeEstudio() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             <Link href="/planes-estudio">
               <Card className="hover-elevate cursor-pointer" data-testid="card-planes-estudio">
                 <CardHeader className="flex flex-row items-center gap-4">
@@ -55,6 +55,22 @@ export default function PlanDeEstudio() {
                 <CardContent>
                   <p className="text-muted-foreground" data-testid="text-sistema-evaluacion">
                     Consulta el Sistema Institucional de Evaluación y Promoción de los Estudiantes.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link href="/proyecto-institucional">
+              <Card className="hover-elevate cursor-pointer" data-testid="card-proyecto-institucional">
+                <CardHeader className="flex flex-row items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-chart-3 flex items-center justify-center flex-shrink-0">
+                    <FileText className="w-6 h-6 text-white" data-testid="icon-proyecto" />
+                  </div>
+                  <CardTitle data-testid="heading-proyecto-institucional">Proyecto Institucional</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground" data-testid="text-proyecto-institucional">
+                    Conoce la visión, misión y objetivos estratégicos de nuestra institución.
                   </p>
                 </CardContent>
               </Card>
