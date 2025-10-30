@@ -10,6 +10,7 @@ import PlantaInstitucional from "@/pages/PlantaInstitucional";
 import Noticias from "@/pages/Noticias";
 import PlataformaDeNotas from "@/pages/PlataformaDeNotas";
 import Proyectos from "@/pages/Proyectos";
+import SistemaEvaluacion from "@/pages/SistemaEvaluacion";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -22,6 +23,7 @@ function Router() {
       <Route path="/noticias" component={Noticias} />
       <Route path="/plataforma-de-notas" component={PlataformaDeNotas} />
       <Route path="/proyectos" component={Proyectos} />
+      <Route path="/sistema-evaluacion" component={SistemaEvaluacion} />
       <Route component={NotFound} />
     </Switch>
   );

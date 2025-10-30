@@ -1,8 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { BookOpen, Calendar, Award, Users, FileText } from "lucide-react";
+import { BookOpen, Calendar, Award, Users } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import SistemaEvaluacionDigital from "@/components/SistemaEvaluacionDigital";
+import { Link } from "wouter";
 
 export default function PlanDeEstudio() {
   return (
@@ -42,36 +42,22 @@ export default function PlanDeEstudio() {
               </CardContent>
             </Card>
 
-            <Card className="hover-elevate" data-testid="card-metodologia">
-              <CardHeader className="flex flex-row items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-chart-2 flex items-center justify-center flex-shrink-0">
-                  <Award className="w-6 h-6 text-white" data-testid="icon-award" />
-                </div>
-                <CardTitle data-testid="heading-metodologia">Metodología</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground" data-testid="text-metodologia">
-                  Grados 6° a 11°. Profundización académica, desarrollo de competencias y preparación 
-                  para educación superior.
-                </p>
-              </CardContent>
-            </Card>
+            <Link href="/sistema-evaluacion">
+              <Card className="hover-elevate cursor-pointer" data-testid="card-metodologia">
+                <CardHeader className="flex flex-row items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-chart-2 flex items-center justify-center flex-shrink-0">
+                    <Award className="w-6 h-6 text-white" data-testid="icon-award" />
+                  </div>
+                  <CardTitle data-testid="heading-metodologia">Metodología</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground" data-testid="text-metodologia">
+                    Consulta el Sistema Institucional de Evaluación y Promoción de los Estudiantes.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
-
-          <Card className="mb-12">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-3" data-testid="heading-sistema-evaluacion">
-                <FileText className="w-6 h-6" data-testid="icon-sistema-evaluacion" />
-                Sistema de Evaluación
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground mb-6" data-testid="text-sistema-evaluacion">
-                Consulta el Sistema Institucional de Evaluación y Promoción de los Estudiantes de nuestra institución en formato digital interactivo.
-              </p>
-              <SistemaEvaluacionDigital />
-            </CardContent>
-          </Card>
 
           <Card data-testid="card-areas-conocimiento">
             <CardHeader>
