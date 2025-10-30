@@ -43,15 +43,15 @@ export default function PlanDeEstudio() {
             </Card>
 
             <Link href="/sistema-evaluacion">
-              <Card className="hover-elevate cursor-pointer" data-testid="card-metodologia">
+              <Card className="hover-elevate cursor-pointer" data-testid="card-sistema-evaluacion">
                 <CardHeader className="flex flex-row items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-chart-2 flex items-center justify-center flex-shrink-0">
                     <Award className="w-6 h-6 text-white" data-testid="icon-award" />
                   </div>
-                  <CardTitle data-testid="heading-metodologia">Metodología</CardTitle>
+                  <CardTitle data-testid="heading-sistema-evaluacion">Sistema de Evaluación</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground" data-testid="text-metodologia">
+                  <p className="text-muted-foreground" data-testid="text-sistema-evaluacion">
                     Consulta el Sistema Institucional de Evaluación y Promoción de los Estudiantes.
                   </p>
                 </CardContent>
