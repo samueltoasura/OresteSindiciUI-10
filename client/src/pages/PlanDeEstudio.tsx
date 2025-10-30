@@ -42,15 +42,15 @@ export default function PlanDeEstudio() {
               </CardContent>
             </Card>
 
-            <Card className="hover-elevate" data-testid="card-sistema-evaluacion">
+            <Card className="hover-elevate" data-testid="card-metodologia">
               <CardHeader className="flex flex-row items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-chart-2 flex items-center justify-center flex-shrink-0">
                   <Award className="w-6 h-6 text-white" data-testid="icon-award" />
                 </div>
-                <CardTitle data-testid="heading-sistema-evaluacion">Sistema de Evaluación</CardTitle>
+                <CardTitle data-testid="heading-metodologia">Metodología</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground" data-testid="text-sistema-evaluacion">
+                <p className="text-muted-foreground" data-testid="text-metodologia">
                   Grados 6° a 11°. Profundización académica, desarrollo de competencias y preparación 
                   para educación superior.
                 </p>
@@ -58,7 +58,22 @@ export default function PlanDeEstudio() {
             </Card>
           </div>
 
-          <Card className="mb-12" data-testid="card-areas-conocimiento">
+          <Card className="mb-12">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-3" data-testid="heading-sistema-evaluacion">
+                <FileText className="w-6 h-6" data-testid="icon-sistema-evaluacion" />
+                Sistema de Evaluación
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground mb-6" data-testid="text-sistema-evaluacion">
+                Consulta el Sistema Institucional de Evaluación y Promoción de los Estudiantes de nuestra institución en formato digital interactivo.
+              </p>
+              <SistemaEvaluacionDigital />
+            </CardContent>
+          </Card>
+
+          <Card data-testid="card-areas-conocimiento">
             <CardHeader>
               <CardTitle className="flex items-center gap-3" data-testid="heading-areas-conocimiento">
                 <Users className="w-6 h-6" data-testid="icon-users" />
@@ -87,21 +102,6 @@ export default function PlanDeEstudio() {
                   </div>
                 ))}
               </div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-3" data-testid="heading-siee-card">
-                <FileText className="w-6 h-6" data-testid="icon-siee" />
-                Sistema Institucional de Evaluación
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground mb-6" data-testid="text-siee-description">
-                Consulta el Sistema Institucional de Evaluación y Promoción de los Estudiantes de nuestra institución en formato digital interactivo.
-              </p>
-              <SistemaEvaluacionDigital />
             </CardContent>
           </Card>
         </div>
