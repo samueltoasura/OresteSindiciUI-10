@@ -8,14 +8,10 @@ import {
 } from "@/components/ui/carousel";
 import image1 from "@assets/1.jpg";
 import image2 from "@assets/2.jpg";
-import image3 from "@assets/3.jpg";
-import image4 from "@assets/4.jpg";
 
 const slides = [
   { id: 1, image: image1, alt: "Ceremonia institucional con estudiantes" },
   { id: 2, image: image2, alt: "Evento institucional con comunidad" },
-  { id: 3, image: image3, alt: "Acto cívico estudiantil" },
-  { id: 4, image: image4, alt: "Presentación estudiantil" },
 ];
 
 export default function HeroSection() {
