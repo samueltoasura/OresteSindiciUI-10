@@ -166,29 +166,6 @@ export default function Noticias() {
               </CardContent>
             </Card>
           </div>
-
-          {/* Suscripción */}
-          <div className="mt-12">
-            <Card className="bg-gradient-to-br from-chart-1/10 to-chart-1/5 border-chart-1/20">
-              <CardContent className="pt-6">
-                <div className="text-center">
-                  <h3 className="text-xl font-semibold text-foreground mb-2">
-                    ¿Quieres recibir nuestras noticias?
-                  </h3>
-                  <p className="text-muted-foreground mb-4">
-                    Suscríbete a nuestro boletín informativo
-                  </p>
-                  <button 
-                    className="px-6 min-h-9 rounded-md bg-chart-1 text-white font-medium hover-elevate active-elevate-2"
-                    onClick={() => console.log('Suscripción iniciada')}
-                    data-testid="button-subscribe"
-                  >
-                    Suscribirse
-                  </button>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </main>
 
