@@ -1,29 +1,18 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Newspaper, Calendar, Trophy, Star, Sparkles } from "lucide-react";
+import { Newspaper, Calendar } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import type { LucideIcon } from "lucide-react";
+
+interface Noticia {
+  title: string;
+  date: string;
+  icon: LucideIcon;
+  content: string;
+}
 
 export default function Noticias() {
-  const noticias = [
-    {
-      title: "Excelentes Resultados en Pruebas Saber",
-      date: "15 de Octubre, 2025",
-      icon: Trophy,
-      content: "Nuestros estudiantes obtuvieron sobresalientes resultados en las pruebas Saber, ubicándose entre los mejores del departamento."
-    },
-    {
-      title: "Feria de Ciencias 2025",
-      date: "10 de Octubre, 2025",
-      icon: Star,
-      content: "Exitosa participación en la Feria de Ciencias con proyectos innovadores desarrollados por nuestros estudiantes."
-    },
-    {
-      title: "Nueva Aula de Tecnología",
-      date: "5 de Octubre, 2025",
-      icon: Sparkles,
-      content: "Inauguramos nuestra nueva aula de tecnología equipada con computadores de última generación y herramientas digitales."
-    }
-  ];
+  const noticias: Noticia[] = [];
 
   return (
     <div className="min-h-screen flex flex-col">
