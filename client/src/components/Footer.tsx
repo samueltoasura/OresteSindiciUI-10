@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Facebook, Youtube } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -68,6 +69,15 @@ export default function Footer() {
                 data-testid="link-youtube"
               >
                 <Youtube className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://wa.me/573001234567" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover-elevate active-elevate-2"
+                data-testid="link-whatsapp-footer"
+              >
+                <FaWhatsapp className="w-5 h-5" />
               </a>
             </div>
           </div>
