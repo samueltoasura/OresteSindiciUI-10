@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Newspaper, Calendar, Megaphone, FileText, AlertCircle, Trophy, Star, Sparkles } from "lucide-react";
+import { Newspaper, Calendar, Megaphone, FileText, AlertCircle, Trophy, Star, Sparkles, ArrowLeft } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 import type { LucideIcon } from "lucide-react";
 
 interface Comunicado {
@@ -23,8 +24,10 @@ interface Noticia {
 }
 
 export default function Noticias() {
-  const [selectedNoticia, setSelectedNoticia] = useState<Noticia | null>(null);
+  const [isComunicadosOpen, setIsComunicadosOpen] = useState(false);
   const [selectedComunicado, setSelectedComunicado] = useState<Comunicado | null>(null);
+  const [isNoticiasOpen, setIsNoticiasOpen] = useState(false);
+  const [selectedNoticia, setSelectedNoticia] = useState<Noticia | null>(null);
 
   const comunicados: Comunicado[] = [
     {
@@ -74,6 +77,16 @@ export default function Noticias() {
     }
   ];
 
+  const handleCloseComunicados = () => {
+    setIsComunicadosOpen(false);
+    setSelectedComunicado(null);
+  };
+
+  const handleCloseNoticias = () => {
+    setIsNoticiasOpen(false);
+    setSelectedNoticia(null);
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -92,76 +105,66 @@ export default function Noticias() {
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">Comunicados</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Haz click en cada comunicado para ver más detalles.
+              Anuncios importantes para la comunidad educativa.
             </p>
 
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {comunicados.map((comunicado, index) => (
-                <Card 
-                  key={index} 
-                  className="hover-elevate cursor-pointer transition-all"
-                  onClick={() => setSelectedComunicado(comunicado)}
-                  data-testid={`card-comunicado-${index}`}
-                >
-                  <CardHeader>
-                    <div className="w-12 h-12 rounded-full bg-chart-2 flex items-center justify-center mb-3">
-                      <comunicado.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <CardTitle className="text-lg">{comunicado.title}</CardTitle>
-                    <CardDescription className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4" />
-                      <span>{comunicado.date}</span>
+            <Card 
+              className="hover-elevate cursor-pointer transition-all max-w-2xl"
+              onClick={() => setIsComunicadosOpen(true)}
+              data-testid="button-open-comunicados"
+            >
+              <CardHeader>
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 rounded-full bg-chart-2 flex items-center justify-center flex-shrink-0">
+                    <Megaphone className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <CardTitle className="text-2xl">Ver Comunicados</CardTitle>
+                    <CardDescription className="text-base mt-2">
+                      Haz click aquí para ver todos los comunicados institucionales
                     </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{comunicado.summary}</p>
-                    <p className="mt-2 text-sm text-chart-2 font-medium">
-                      Ver más →
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  {comunicados.length} comunicados disponibles
+                </p>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Sección de Noticias */}
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">Últimas Noticias</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Haz click en cada noticia para ver más detalles.
+              Mantente informado sobre los eventos y logros más recientes de nuestra institución.
             </p>
 
-            <div className="grid gap-6">
-              {noticias.map((noticia, index) => (
-                <Card 
-                  key={index} 
-                  className="hover-elevate cursor-pointer transition-all"
-                  onClick={() => setSelectedNoticia(noticia)}
-                  data-testid={`card-noticia-${index}`}
-                >
-                  <CardHeader>
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-full bg-chart-1 flex items-center justify-center flex-shrink-0">
-                        <noticia.icon className="w-6 h-6 text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <CardTitle className="mb-2">{noticia.title}</CardTitle>
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <Calendar className="w-4 h-4" />
-                          <span>{noticia.date}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{noticia.summary}</p>
-                    <p className="mt-2 text-sm text-chart-1 font-medium">
-                      Ver más →
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <Card 
+              className="hover-elevate cursor-pointer transition-all max-w-2xl"
+              onClick={() => setIsNoticiasOpen(true)}
+              data-testid="button-open-noticias"
+            >
+              <CardHeader>
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 rounded-full bg-chart-1 flex items-center justify-center flex-shrink-0">
+                    <Newspaper className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <CardTitle className="text-2xl">Ver Noticias</CardTitle>
+                    <CardDescription className="text-base mt-2">
+                      Haz click aquí para ver todas las noticias de la institución
+                    </CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  {noticias.length} noticias disponibles
+                </p>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Suscripción */}
@@ -189,57 +192,155 @@ export default function Noticias() {
         </div>
       </main>
 
-      {/* Dialog para mostrar comunicado completo */}
-      <Dialog open={!!selectedComunicado} onOpenChange={(open) => !open && setSelectedComunicado(null)}>
-        <DialogContent data-testid="dialog-comunicado-detalle">
-          <DialogHeader>
-            <DialogTitle className="text-2xl flex items-center gap-3">
-              {selectedComunicado && (
-                <>
-                  <div className="w-10 h-10 rounded-full bg-chart-2 flex items-center justify-center flex-shrink-0">
-                    <selectedComunicado.icon className="w-5 h-5 text-white" />
-                  </div>
-                  {selectedComunicado.title}
-                </>
-              )}
-            </DialogTitle>
-            <DialogDescription className="flex items-center gap-2 text-base">
-              <Calendar className="w-4 h-4" />
-              <span>{selectedComunicado?.date}</span>
-            </DialogDescription>
-          </DialogHeader>
-          <div className="mt-4">
-            <p className="text-foreground leading-relaxed">
-              {selectedComunicado?.fullContent}
-            </p>
-          </div>
+      {/* Dialog para Comunicados - Vista de lista o detalle */}
+      <Dialog open={isComunicadosOpen} onOpenChange={handleCloseComunicados}>
+        <DialogContent className="max-w-3xl" data-testid="dialog-comunicados">
+          {selectedComunicado ? (
+            // Vista de detalle del comunicado
+            <>
+              <DialogHeader>
+                <div className="flex items-center gap-3 mb-2">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => setSelectedComunicado(null)}
+                    data-testid="button-back-comunicados"
+                  >
+                    <ArrowLeft className="w-5 h-5" />
+                  </Button>
+                  <DialogTitle className="text-2xl flex items-center gap-3 flex-1">
+                    <div className="w-10 h-10 rounded-full bg-chart-2 flex items-center justify-center flex-shrink-0">
+                      <selectedComunicado.icon className="w-5 h-5 text-white" />
+                    </div>
+                    {selectedComunicado.title}
+                  </DialogTitle>
+                </div>
+                <DialogDescription className="flex items-center gap-2 text-base">
+                  <Calendar className="w-4 h-4" />
+                  <span>{selectedComunicado.date}</span>
+                </DialogDescription>
+              </DialogHeader>
+              <div className="mt-4">
+                <p className="text-foreground leading-relaxed">
+                  {selectedComunicado.fullContent}
+                </p>
+              </div>
+            </>
+          ) : (
+            // Vista de lista de comunicados
+            <>
+              <DialogHeader>
+                <DialogTitle className="text-2xl">Comunicados</DialogTitle>
+                <DialogDescription>
+                  Selecciona un comunicado para ver más detalles
+                </DialogDescription>
+              </DialogHeader>
+              <div className="grid gap-4 mt-4">
+                {comunicados.map((comunicado, index) => (
+                  <Card
+                    key={index}
+                    className="hover-elevate cursor-pointer transition-all"
+                    onClick={() => setSelectedComunicado(comunicado)}
+                    data-testid={`button-open-comunicado-${index}`}
+                  >
+                    <CardHeader>
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 rounded-full bg-chart-2 flex items-center justify-center flex-shrink-0">
+                          <comunicado.icon className="w-6 h-6 text-white" />
+                        </div>
+                        <div className="flex-1">
+                          <CardTitle className="text-lg">{comunicado.title}</CardTitle>
+                          <CardDescription className="flex items-center gap-2 mt-2">
+                            <Calendar className="w-4 h-4" />
+                            <span>{comunicado.date}</span>
+                          </CardDescription>
+                        </div>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground">{comunicado.summary}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </>
+          )}
         </DialogContent>
       </Dialog>
 
-      {/* Dialog para mostrar noticia completa */}
-      <Dialog open={!!selectedNoticia} onOpenChange={(open) => !open && setSelectedNoticia(null)}>
-        <DialogContent data-testid="dialog-noticia-detalle">
-          <DialogHeader>
-            <DialogTitle className="text-2xl flex items-center gap-3">
-              {selectedNoticia && (
-                <>
-                  <div className="w-10 h-10 rounded-full bg-chart-1 flex items-center justify-center flex-shrink-0">
-                    <selectedNoticia.icon className="w-5 h-5 text-white" />
-                  </div>
-                  {selectedNoticia.title}
-                </>
-              )}
-            </DialogTitle>
-            <DialogDescription className="flex items-center gap-2 text-base">
-              <Calendar className="w-4 h-4" />
-              <span>{selectedNoticia?.date}</span>
-            </DialogDescription>
-          </DialogHeader>
-          <div className="mt-4">
-            <p className="text-foreground leading-relaxed">
-              {selectedNoticia?.fullContent}
-            </p>
-          </div>
+      {/* Dialog para Noticias - Vista de lista o detalle */}
+      <Dialog open={isNoticiasOpen} onOpenChange={handleCloseNoticias}>
+        <DialogContent className="max-w-3xl" data-testid="dialog-noticias">
+          {selectedNoticia ? (
+            // Vista de detalle de la noticia
+            <>
+              <DialogHeader>
+                <div className="flex items-center gap-3 mb-2">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => setSelectedNoticia(null)}
+                    data-testid="button-back-noticias"
+                  >
+                    <ArrowLeft className="w-5 h-5" />
+                  </Button>
+                  <DialogTitle className="text-2xl flex items-center gap-3 flex-1">
+                    <div className="w-10 h-10 rounded-full bg-chart-1 flex items-center justify-center flex-shrink-0">
+                      <selectedNoticia.icon className="w-5 h-5 text-white" />
+                    </div>
+                    {selectedNoticia.title}
+                  </DialogTitle>
+                </div>
+                <DialogDescription className="flex items-center gap-2 text-base">
+                  <Calendar className="w-4 h-4" />
+                  <span>{selectedNoticia.date}</span>
+                </DialogDescription>
+              </DialogHeader>
+              <div className="mt-4">
+                <p className="text-foreground leading-relaxed">
+                  {selectedNoticia.fullContent}
+                </p>
+              </div>
+            </>
+          ) : (
+            // Vista de lista de noticias
+            <>
+              <DialogHeader>
+                <DialogTitle className="text-2xl">Últimas Noticias</DialogTitle>
+                <DialogDescription>
+                  Selecciona una noticia para ver más detalles
+                </DialogDescription>
+              </DialogHeader>
+              <div className="grid gap-4 mt-4">
+                {noticias.map((noticia, index) => (
+                  <Card
+                    key={index}
+                    className="hover-elevate cursor-pointer transition-all"
+                    onClick={() => setSelectedNoticia(noticia)}
+                    data-testid={`button-open-noticia-${index}`}
+                  >
+                    <CardHeader>
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 rounded-full bg-chart-1 flex items-center justify-center flex-shrink-0">
+                          <noticia.icon className="w-6 h-6 text-white" />
+                        </div>
+                        <div className="flex-1">
+                          <CardTitle className="text-lg">{noticia.title}</CardTitle>
+                          <CardDescription className="flex items-center gap-2 mt-2">
+                            <Calendar className="w-4 h-4" />
+                            <span>{noticia.date}</span>
+                          </CardDescription>
+                        </div>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground">{noticia.summary}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </>
+          )}
         </DialogContent>
       </Dialog>
 
