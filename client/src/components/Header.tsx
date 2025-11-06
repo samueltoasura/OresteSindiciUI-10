@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
+import { FaWhatsapp } from "react-icons/fa";
 import logoImage from "@assets/Adobe Express - file_1761600268000.png";
 import {
   Dialog,
@@ -29,7 +30,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-chart-4 text-foreground shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between gap-4 h-16">
           <Link 
             href="/" 
             className="flex items-center gap-3 px-3 py-2 hover-elevate active-elevate-2 rounded-md"
@@ -46,13 +47,26 @@ export default function Header() {
             </div>
           </Link>
           
-          <button
-            onClick={() => setRegisterOpen(true)}
-            className="px-6 min-h-9 rounded-md bg-chart-2 text-white font-medium hover-elevate active-elevate-2"
-            data-testid="button-register"
-          >
-            Registrarse
-          </button>
+          <div className="flex items-center gap-3">
+            <a
+              href="https://wa.me/573001234567"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 min-h-9 rounded-md bg-[#25D366] text-white font-medium hover-elevate active-elevate-2"
+              data-testid="link-whatsapp"
+            >
+              <FaWhatsapp className="w-5 h-5" />
+              <span className="hidden sm:inline">WhatsApp</span>
+            </a>
+            
+            <button
+              onClick={() => setRegisterOpen(true)}
+              className="px-6 min-h-9 rounded-md bg-chart-2 text-white font-medium hover-elevate active-elevate-2"
+              data-testid="button-register"
+            >
+              Registrarse
+            </button>
+          </div>
         </div>
       </div>
 
