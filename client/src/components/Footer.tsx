@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">Contacto</h3>
             <div className="space-y-3">
@@ -25,32 +25,6 @@ export default function Footer() {
                 <p className="text-sm opacity-90">info@orestesindici.edu</p>
               </div>
             </div>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Enlaces Rápidos</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-sm opacity-90 hover-elevate active-elevate-2 inline-block px-2 py-1 rounded-md" data-testid="link-footer-nosotros">
-                  Nosotros
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm opacity-90 hover-elevate active-elevate-2 inline-block px-2 py-1 rounded-md" data-testid="link-footer-admisiones">
-                  Admisiones
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm opacity-90 hover-elevate active-elevate-2 inline-block px-2 py-1 rounded-md" data-testid="link-footer-calendario">
-                  Calendario Académico
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm opacity-90 hover-elevate active-elevate-2 inline-block px-2 py-1 rounded-md" data-testid="link-footer-biblioteca">
-                  Biblioteca
-                </a>
-              </li>
-            </ul>
           </div>
 
           <div>
