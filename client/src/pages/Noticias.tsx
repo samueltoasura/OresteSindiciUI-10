@@ -4,14 +4,14 @@ import Footer from "@/components/Footer";
 import { Newspaper, Calendar, Megaphone, FileText, AlertCircle, Trophy, Star, Sparkles } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
 import type { LucideIcon } from "lucide-react";
 
 interface Comunicado {
   title: string;
   date: string;
   icon: LucideIcon;
-  description: string;
+  summary: string;
+  fullContent: string;
 }
 
 interface Noticia {
@@ -24,25 +24,29 @@ interface Noticia {
 
 export default function Noticias() {
   const [selectedNoticia, setSelectedNoticia] = useState<Noticia | null>(null);
+  const [selectedComunicado, setSelectedComunicado] = useState<Comunicado | null>(null);
 
   const comunicados: Comunicado[] = [
     {
       title: "Reunión de Padres de Familia",
       date: "20 de Noviembre, 2025",
       icon: Megaphone,
-      description: "Se convoca a todos los padres de familia a la reunión general del próximo viernes a las 2:00 PM en el auditorio principal."
+      summary: "Convocatoria a reunión general del próximo viernes.",
+      fullContent: "Se convoca a todos los padres de familia a la reunión general del próximo viernes 22 de noviembre a las 2:00 PM en el auditorio principal. En esta reunión se tratarán los siguientes puntos: 1) Informe académico del tercer periodo, 2) Actividades y cronograma del cuarto periodo, 3) Preparativos para la clausura del año escolar, 4) Presentación del calendario académico 2026. La asistencia es obligatoria. Los padres que no puedan asistir deberán justificar su ausencia por escrito. Agradecemos su puntualidad y compromiso con la educación de sus hijos."
     },
     {
       title: "Actualización del Manual de Convivencia",
       date: "18 de Noviembre, 2025",
       icon: FileText,
-      description: "Se informa que el manual de convivencia ha sido actualizado. Pueden consultar la nueva versión en la sección correspondiente."
+      summary: "Nueva versión del manual de convivencia disponible.",
+      fullContent: "Se informa a toda la comunidad educativa que el manual de convivencia ha sido actualizado según las nuevas disposiciones del Ministerio de Educación Nacional. Los principales cambios incluyen: actualización de protocolos de convivencia escolar, nuevas normas sobre el uso de dispositivos electrónicos, procedimientos actualizados para la resolución de conflictos, y derechos y deberes de los estudiantes ajustados a la normativa vigente. Pueden consultar la nueva versión en la sección correspondiente de nuestra página web o solicitar una copia física en la secretaría académica. Es importante que todos los miembros de la comunidad educativa se familiaricen con estos cambios."
     },
     {
       title: "Vacaciones de Fin de Año",
       date: "15 de Noviembre, 2025",
       icon: AlertCircle,
-      description: "Las actividades académicas finalizarán el 15 de diciembre. El retorno a clases será el 15 de enero de 2026."
+      summary: "Información sobre el calendario de fin de año.",
+      fullContent: "Las actividades académicas del presente año escolar finalizarán el 15 de diciembre de 2025. La ceremonia de clausura se llevará a cabo el 14 de diciembre a las 9:00 AM en el coliseo de la institución. El retorno a clases será el 15 de enero de 2026, iniciando con la jornada de inducción para estudiantes nuevos y antiguos. Durante el periodo de vacaciones, la secretaría académica atenderá en horario especial de 8:00 AM a 12:00 M, de lunes a viernes. Les deseamos a todos unas felices fiestas y un próspero año nuevo. Esperamos verlos de vuelta con toda la energía para continuar nuestro compromiso con la excelencia educativa."
     }
   ];
 
@@ -88,12 +92,17 @@ export default function Noticias() {
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">Comunicados</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Anuncios importantes para la comunidad educativa.
+              Haz click en cada comunicado para ver más detalles.
             </p>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {comunicados.map((comunicado, index) => (
-                <Card key={index} data-testid={`card-comunicado-${index}`}>
+                <Card 
+                  key={index} 
+                  className="hover-elevate cursor-pointer transition-all"
+                  onClick={() => setSelectedComunicado(comunicado)}
+                  data-testid={`card-comunicado-${index}`}
+                >
                   <CardHeader>
                     <div className="w-12 h-12 rounded-full bg-chart-2 flex items-center justify-center mb-3">
                       <comunicado.icon className="w-6 h-6 text-white" />
@@ -105,7 +114,10 @@ export default function Noticias() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">{comunicado.description}</p>
+                    <p className="text-muted-foreground">{comunicado.summary}</p>
+                    <p className="mt-2 text-sm text-chart-2 font-medium">
+                      Ver más →
+                    </p>
                   </CardContent>
                 </Card>
               ))}
@@ -143,13 +155,9 @@ export default function Noticias() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">{noticia.summary}</p>
-                    <Button 
-                      variant="link" 
-                      className="mt-2 px-0"
-                      data-testid={`button-ver-mas-${index}`}
-                    >
+                    <p className="mt-2 text-sm text-chart-1 font-medium">
                       Ver más →
-                    </Button>
+                    </p>
                   </CardContent>
                 </Card>
               ))}
@@ -180,6 +188,33 @@ export default function Noticias() {
           </div>
         </div>
       </main>
+
+      {/* Dialog para mostrar comunicado completo */}
+      <Dialog open={!!selectedComunicado} onOpenChange={(open) => !open && setSelectedComunicado(null)}>
+        <DialogContent data-testid="dialog-comunicado-detalle">
+          <DialogHeader>
+            <DialogTitle className="text-2xl flex items-center gap-3">
+              {selectedComunicado && (
+                <>
+                  <div className="w-10 h-10 rounded-full bg-chart-2 flex items-center justify-center flex-shrink-0">
+                    <selectedComunicado.icon className="w-5 h-5 text-white" />
+                  </div>
+                  {selectedComunicado.title}
+                </>
+              )}
+            </DialogTitle>
+            <DialogDescription className="flex items-center gap-2 text-base">
+              <Calendar className="w-4 h-4" />
+              <span>{selectedComunicado?.date}</span>
+            </DialogDescription>
+          </DialogHeader>
+          <div className="mt-4">
+            <p className="text-foreground leading-relaxed">
+              {selectedComunicado?.fullContent}
+            </p>
+          </div>
+        </DialogContent>
+      </Dialog>
 
       {/* Dialog para mostrar noticia completa */}
       <Dialog open={!!selectedNoticia} onOpenChange={(open) => !open && setSelectedNoticia(null)}>
