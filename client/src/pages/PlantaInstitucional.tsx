@@ -6,7 +6,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 export default function PlantaInstitucional() {
   const staff = [
-    { name: "María González", role: "Rectora", initials: "MG" },
+    { name: "Luz Jackelin Sanchez Solorzano", role: "Rectora", initials: "LJS" },
     { name: "Carlos Rodríguez", role: "Coordinador Académico", initials: "CR" },
     { name: "Ana Martínez", role: "Coordinadora de Convivencia", initials: "AM" },
     { name: "Luis Pérez", role: "Coordinador Administrativo", initials: "LP" }
