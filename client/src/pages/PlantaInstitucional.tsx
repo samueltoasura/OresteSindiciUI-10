@@ -24,7 +24,7 @@ export default function PlantaInstitucional() {
   ];
 
   const docentesSecundaria = [
-    { name: "Roberto González Pérez", subject: "Matemáticas", initials: "RGP" },
+    { name: "Diego Alejandro Martinez", subject: "601", initials: "DAM" },
     { name: "Laura Sofía Vargas", subject: "Ciencias Naturales", initials: "LSV" },
     { name: "Miguel Ángel Ruiz", subject: "Lengua Castellana", initials: "MAR" },
     { name: "Diana Carolina Suárez", subject: "Ciencias Sociales", initials: "DCS" },
