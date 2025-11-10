@@ -16,7 +16,7 @@ export default function PlantaInstitucional() {
   ];
 
   const docentesPrimaria = [
-    { name: "María López García", subject: "1° Grado", initials: "MLG" },
+    { name: "Jaqueline Salazar Alvarado", subject: "Transición", initials: "JSA" },
     { name: "Carlos Fernández Silva", subject: "2° Grado", initials: "CFS" },
     { name: "Ana Beatriz Torres", subject: "3° Grado", initials: "ABT" },
     { name: "Jorge Luis Mendoza", subject: "4° Grado", initials: "JLM" },
