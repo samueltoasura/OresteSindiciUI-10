@@ -3,8 +3,12 @@ import Footer from "@/components/Footer";
 import { Users, UserCheck, BookOpen, Briefcase } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { useState } from "react";
 
 export default function PlantaInstitucional() {
+  const [showDocentes, setShowDocentes] = useState(false);
+  
   const staff = [
     { name: "Luz Jackelin Sanchez Solorzano", role: "Rectora", initials: "LJS" },
     { name: "Jose Fabian Agudelo Rodriguez", role: "Coordinador", initials: "JFAR" }
@@ -63,34 +67,17 @@ export default function PlantaInstitucional() {
             </div>
           </div>
 
-          <div className="mb-12">
-            <h3 className="text-2xl font-semibold text-foreground mb-6">Docentes</h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {docentes.map((person) => (
-                <Card key={person.name} className="hover-elevate" data-testid={`card-docente-${person.initials}`}>
-                  <CardContent className="pt-6">
-                    <div className="flex flex-col items-center text-center">
-                      <Avatar className="w-20 h-20 mb-4">
-                        <AvatarFallback className="bg-chart-2 text-white text-lg font-semibold">
-                          {person.initials}
-                        </AvatarFallback>
-                      </Avatar>
-                      <h4 className="font-semibold text-foreground">{person.name}</h4>
-                      <p className="text-sm text-muted-foreground">{person.subject}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-
           <div className="grid md:grid-cols-3 gap-6">
-            <Card className="hover-elevate">
+            <Card 
+              className="hover-elevate cursor-pointer" 
+              onClick={() => setShowDocentes(true)}
+              data-testid="card-docentes"
+            >
               <CardHeader>
                 <div className="w-12 h-12 rounded-full bg-chart-4 flex items-center justify-center mb-3">
                   <BookOpen className="w-6 h-6 text-white" />
                 </div>
-                <CardTitle>Total Docentes</CardTitle>
+                <CardTitle>Docentes</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-3xl font-bold text-foreground mb-2">45</p>
@@ -134,6 +121,36 @@ export default function PlantaInstitucional() {
       </main>
 
       <Footer />
+
+      <Dialog open={showDocentes} onOpenChange={setShowDocentes}>
+        <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold">Docentes</DialogTitle>
+          </DialogHeader>
+          <div className="mt-4">
+            <p className="text-muted-foreground mb-6">
+              Nuestro equipo de 45 docentes está compuesto por profesionales altamente calificados y comprometidos con la excelencia educativa.
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {docentes.map((person) => (
+                <Card key={person.name} className="hover-elevate">
+                  <CardContent className="pt-4">
+                    <div className="flex flex-col items-center text-center">
+                      <Avatar className="w-16 h-16 mb-3">
+                        <AvatarFallback className="bg-chart-2 text-white text-sm font-semibold">
+                          {person.initials}
+                        </AvatarFallback>
+                      </Avatar>
+                      <h4 className="font-semibold text-foreground text-sm">{person.name}</h4>
+                      <p className="text-xs text-muted-foreground">{person.subject}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
