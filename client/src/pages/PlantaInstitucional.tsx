@@ -7,22 +7,30 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { useState } from "react";
 
 export default function PlantaInstitucional() {
-  const [showDocentes, setShowDocentes] = useState(false);
+  const [showDocentesPrimaria, setShowDocentesPrimaria] = useState(false);
+  const [showDocentesSecundaria, setShowDocentesSecundaria] = useState(false);
   
   const staff = [
     { name: "Luz Jackelin Sanchez Solorzano", role: "Rectora", initials: "LJS" },
     { name: "Jose Fabian Agudelo Rodriguez", role: "Coordinador", initials: "JFAR" }
   ];
 
-  const docentes = [
-    { name: "María López García", subject: "Matemáticas", initials: "MLG" },
-    { name: "Carlos Fernández Silva", subject: "Ciencias Naturales", initials: "CFS" },
-    { name: "Ana Beatriz Torres", subject: "Lengua Castellana", initials: "ABT" },
-    { name: "Jorge Luis Mendoza", subject: "Ciencias Sociales", initials: "JLM" },
-    { name: "Patricia Ramírez Castro", subject: "Inglés", initials: "PRC" },
-    { name: "Roberto González Pérez", subject: "Educación Física", initials: "RGP" },
-    { name: "Laura Sofía Vargas", subject: "Artes", initials: "LSV" },
-    { name: "Miguel Ángel Ruiz", subject: "Tecnología e Informática", initials: "MAR" }
+  const docentesPrimaria = [
+    { name: "María López García", subject: "1° Grado", initials: "MLG" },
+    { name: "Carlos Fernández Silva", subject: "2° Grado", initials: "CFS" },
+    { name: "Ana Beatriz Torres", subject: "3° Grado", initials: "ABT" },
+    { name: "Jorge Luis Mendoza", subject: "4° Grado", initials: "JLM" },
+    { name: "Patricia Ramírez Castro", subject: "5° Grado", initials: "PRC" }
+  ];
+
+  const docentesSecundaria = [
+    { name: "Roberto González Pérez", subject: "Matemáticas", initials: "RGP" },
+    { name: "Laura Sofía Vargas", subject: "Ciencias Naturales", initials: "LSV" },
+    { name: "Miguel Ángel Ruiz", subject: "Lengua Castellana", initials: "MAR" },
+    { name: "Diana Carolina Suárez", subject: "Ciencias Sociales", initials: "DCS" },
+    { name: "Fernando Andrés Gómez", subject: "Inglés", initials: "FAG" },
+    { name: "Camila Andrea Rojas", subject: "Educación Física", initials: "CAR" },
+    { name: "Santiago Martín Cruz", subject: "Artes", initials: "SMC" }
   ];
 
   return (
@@ -70,19 +78,38 @@ export default function PlantaInstitucional() {
           <div className="grid md:grid-cols-3 gap-6">
             <Card 
               className="hover-elevate cursor-pointer" 
-              onClick={() => setShowDocentes(true)}
-              data-testid="card-docentes"
+              onClick={() => setShowDocentesPrimaria(true)}
+              data-testid="card-docentes-primaria"
             >
               <CardHeader>
                 <div className="w-12 h-12 rounded-full bg-chart-4 flex items-center justify-center mb-3">
                   <BookOpen className="w-6 h-6 text-white" />
                 </div>
-                <CardTitle>Docentes</CardTitle>
+                <CardTitle>Docentes Primaria</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-3xl font-bold text-foreground mb-2">45</p>
+                <p className="text-3xl font-bold text-foreground mb-2">25</p>
                 <p className="text-muted-foreground">
-                  Profesionales especializados en diferentes áreas del conocimiento
+                  Profesionales especializados en educación básica primaria
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card 
+              className="hover-elevate cursor-pointer" 
+              onClick={() => setShowDocentesSecundaria(true)}
+              data-testid="card-docentes-secundaria"
+            >
+              <CardHeader>
+                <div className="w-12 h-12 rounded-full bg-chart-4 flex items-center justify-center mb-3">
+                  <BookOpen className="w-6 h-6 text-white" />
+                </div>
+                <CardTitle>Docentes Secundaria</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-3xl font-bold text-foreground mb-2">20</p>
+                <p className="text-muted-foreground">
+                  Profesionales especializados en educación secundaria
                 </p>
               </CardContent>
             </Card>
@@ -122,17 +149,47 @@ export default function PlantaInstitucional() {
 
       <Footer />
 
-      <Dialog open={showDocentes} onOpenChange={setShowDocentes}>
+      <Dialog open={showDocentesPrimaria} onOpenChange={setShowDocentesPrimaria}>
         <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle className="text-2xl font-bold">Docentes</DialogTitle>
+            <DialogTitle className="text-2xl font-bold">Docentes de Primaria</DialogTitle>
           </DialogHeader>
           <div className="mt-4">
             <p className="text-muted-foreground mb-6">
-              Nuestro equipo de 45 docentes está compuesto por profesionales altamente calificados y comprometidos con la excelencia educativa.
+              Nuestro equipo de docentes de primaria está compuesto por profesionales comprometidos con la formación integral de los niños.
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {docentes.map((person) => (
+              {docentesPrimaria.map((person) => (
+                <Card key={person.name} className="hover-elevate">
+                  <CardContent className="pt-4">
+                    <div className="flex flex-col items-center text-center">
+                      <Avatar className="w-16 h-16 mb-3">
+                        <AvatarFallback className="bg-chart-2 text-white text-sm font-semibold">
+                          {person.initials}
+                        </AvatarFallback>
+                      </Avatar>
+                      <h4 className="font-semibold text-foreground text-sm">{person.name}</h4>
+                      <p className="text-xs text-muted-foreground">{person.subject}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={showDocentesSecundaria} onOpenChange={setShowDocentesSecundaria}>
+        <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold">Docentes de Secundaria</DialogTitle>
+          </DialogHeader>
+          <div className="mt-4">
+            <p className="text-muted-foreground mb-6">
+              Nuestro equipo de docentes de secundaria está especializado en diferentes áreas del conocimiento.
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {docentesSecundaria.map((person) => (
                 <Card key={person.name} className="hover-elevate">
                   <CardContent className="pt-4">
                     <div className="flex flex-col items-center text-center">
