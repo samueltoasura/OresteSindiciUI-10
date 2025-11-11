@@ -35,7 +35,6 @@ export default function PlantaInstitucional() {
     { name: "Martin Honorio Castro", subject: "803", initials: "MHC" },
     { name: "Sandra Yamileth Cubillos", subject: "901", initials: "SYC" },
     { name: "Miller Humberto Lozano", subject: "902", initials: "MHL" },
-    { name: "Laura Díaz", subject: "903", initials: "LD" },
     { name: "Olivia Vanegas", subject: "1001", initials: "OV" },
     { name: "Rosa Ortiz", subject: "1002", initials: "RO" },
     { name: "Juan Castro", subject: "1003", initials: "JC2" },
