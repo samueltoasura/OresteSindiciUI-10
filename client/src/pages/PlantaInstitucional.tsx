@@ -28,8 +28,8 @@ export default function PlantaInstitucional() {
     { name: "Jhonathan Chacon", subject: "602", initials: "JC" },
     { name: "Jesus Ivan Verano", subject: "603", initials: "JIV" },
     { name: "Diana Carolina Suárez", subject: "Ciencias Sociales", initials: "DCS" },
-    { name: "Fernando Andrés Gómez", subject: "Inglés", initials: "FAG" },
-    { name: "Camila Andrea Rojas", subject: "Educación Física", initials: "CAR" },
+    { name: "Nelson Miranda", subject: "702", initials: "NM" },
+    { name: "Janeth Rojas Lievano", subject: "703", initials: "JRL" },
     { name: "Santiago Martín Cruz", subject: "Artes", initials: "SMC" }
   ];
 
