@@ -26,7 +26,7 @@ export default function PlantaInstitucional() {
   const docentesSecundaria = [
     { name: "Diego Alejandro Martinez", subject: "601", initials: "DAM" },
     { name: "Jhonathan Chacon", subject: "602", initials: "JC" },
-    { name: "Jesus Ivan Verano", subject: "Lengua Castellana", initials: "JIV" },
+    { name: "Jesus Ivan Verano", subject: "603", initials: "JIV" },
     { name: "Diana Carolina Suárez", subject: "Ciencias Sociales", initials: "DCS" },
     { name: "Fernando Andrés Gómez", subject: "Inglés", initials: "FAG" },
     { name: "Camila Andrea Rojas", subject: "Educación Física", initials: "CAR" },
