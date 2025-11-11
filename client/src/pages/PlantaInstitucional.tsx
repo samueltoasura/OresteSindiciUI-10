@@ -30,7 +30,6 @@ export default function PlantaInstitucional() {
     { name: "Diana Carolina Suárez", subject: "Ciencias Sociales", initials: "DCS" },
     { name: "Nelson Miranda", subject: "702", initials: "NM" },
     { name: "Janeth Rojas Lievano", subject: "703", initials: "JRL" },
-    { name: "Santiago Martín Cruz", subject: "Artes", initials: "SMC" },
     { name: "Carlos Ruiz", subject: "801", initials: "CR" },
     { name: "Ana López", subject: "802", initials: "AL" },
     { name: "Luis Torres", subject: "803", initials: "LT" },
