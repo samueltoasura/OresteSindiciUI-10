@@ -30,7 +30,19 @@ export default function PlantaInstitucional() {
     { name: "Diana Carolina Suárez", subject: "Ciencias Sociales", initials: "DCS" },
     { name: "Nelson Miranda", subject: "702", initials: "NM" },
     { name: "Janeth Rojas Lievano", subject: "703", initials: "JRL" },
-    { name: "Santiago Martín Cruz", subject: "Artes", initials: "SMC" }
+    { name: "Santiago Martín Cruz", subject: "Artes", initials: "SMC" },
+    { name: "Carlos Ruiz", subject: "801", initials: "CR" },
+    { name: "Ana López", subject: "802", initials: "AL" },
+    { name: "Luis Torres", subject: "803", initials: "LT" },
+    { name: "María Silva", subject: "901", initials: "MS" },
+    { name: "José Ramírez", subject: "902", initials: "JR" },
+    { name: "Laura Díaz", subject: "903", initials: "LD" },
+    { name: "Pedro Mora", subject: "1001", initials: "PM" },
+    { name: "Rosa Ortiz", subject: "1002", initials: "RO" },
+    { name: "Juan Castro", subject: "1003", initials: "JC2" },
+    { name: "Elena Vargas", subject: "1101", initials: "EV" },
+    { name: "Mario Peña", subject: "1102", initials: "MP" },
+    { name: "Sofia Mejía", subject: "1103", initials: "SM" }
   ];
 
   return (
