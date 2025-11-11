@@ -59,7 +59,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 flex items-center justify-center px-4 pointer-events-none">
         <div className="text-center max-w-4xl">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
-            Tu futuro empieza aquí
+            Hacia una educación integral y progresista. Compromiso de todos
           </h2>
           <p className="text-base md:text-lg text-white/95 font-medium drop-shadow-md">
             Institución Educativa Oreste Sindici

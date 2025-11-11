@@ -49,7 +49,7 @@
 
 **Hero Section**:
 - Full-width banner with institutional image (students in classroom or campus)
-- Large heading "Tu futuro empieza aquí" centered
+- Large heading "Hacia una educación integral y progresista. Compromiso de todos" centered
 - Institutional name "Institución Educativa Oreste Sindici" prominently displayed
 - Hero image with subtle dark overlay (bg-gradient-to-b from-transparent to-black/40)
 
