@@ -38,9 +38,9 @@ export default function PlantaInstitucional() {
     { name: "Olivia Vanegas", subject: "1001", initials: "OV" },
     { name: "Fabian Andres Cao", subject: "1002", initials: "FAC" },
     { name: "Juan David Firigua", subject: "11", initials: "JDF" },
-    { name: "Elena Vargas", subject: "1101", initials: "EV" },
-    { name: "Mario Peña", subject: "1102", initials: "MP" },
-    { name: "Sofia Mejía", subject: "1103", initials: "SM" }
+    { name: "Samuel Toasura Torra", subject: "1101", initials: "STT" },
+    { name: "Leonardo Peralta", subject: "1102", initials: "LP" },
+    { name: "Sonia Yaned Porras", subject: "1103", initials: "SYP" }
   ];
 
   return (
