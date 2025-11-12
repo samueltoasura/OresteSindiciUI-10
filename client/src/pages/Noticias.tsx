@@ -66,7 +66,7 @@ export default function Noticias() {
     },
     {
       title: "Entrega de boletines de III Periodo escuela Policarpa Salavarrieta, COLEGIO Oreste Sindici",
-      date: "10 de Octubre, 2025",
+      date: "29 de Octubre, 2025",
       icon: Star,
       summary: "Información sobre la entrega de boletines del tercer periodo académico.",
       fullContent: "Se informa a toda la comunidad educativa que la entrega de boletines correspondientes al tercer periodo académico se realizará en las instalaciones de la escuela Policarpa Salavarrieta del Colegio Oreste Sindici. Los padres de familia y acudientes podrán recibir los informes académicos de sus hijos donde se refleja el desempeño y avance durante este periodo. Agradecemos la asistencia puntual de los padres de familia y su compromiso con el proceso educativo de nuestros estudiantes."
