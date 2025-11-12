@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Newspaper, Calendar, Megaphone, FileText, AlertCircle, Trophy, Star, Sparkles, ArrowLeft } from "lucide-react";
+import { Newspaper, Calendar, Megaphone, FileText, AlertCircle, Trophy, Star, Sparkles, ArrowLeft, Shield } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -61,6 +61,13 @@ export default function Noticias() {
   ];
 
   const noticias: Noticia[] = [
+    {
+      title: "Plan Mochila",
+      date: "23 de Octubre, 2025",
+      icon: Shield,
+      summary: "Actividad preventiva realizada con el acompañamiento de la Policía de Infancia y Adolescencia.",
+      fullContent: "En la institución educativa Orestes Sindici se llevó a cabo la actividad denominada Plan Mochila, con el acompañamiento de la Policía de Infancia y Adolescencia. Esta jornada tuvo como propósito realizar una prevención y control para garantizar que dentro de las mochilas de los estudiantes no se encontraran sustancias psicoactivas ni elementos prohibidos.\n\nDurante la actividad, los policías realizaron una revisión cuidadosa maleta por maleta, con el apoyo de su mascota canina entrenada para detectar estupefacientes. Esta iniciativa buscó promover la seguridad, el bienestar y la convivencia sana dentro del entorno escolar, además de fomentar la conciencia sobre la importancia de mantener un ambiente libre de drogas.\n\nEl Plan Mochila fue una experiencia educativa y preventiva que reforzó los valores de responsabilidad y autocuidado entre los estudiantes de la institución."
+    },
     {
       title: "Competencia Los derechos humanos del grado 601",
       date: "6 de Noviembre, 2025",
