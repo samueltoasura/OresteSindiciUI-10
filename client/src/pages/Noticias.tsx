@@ -55,11 +55,11 @@ export default function Noticias() {
 
   const noticias: Noticia[] = [
     {
-      title: "Excelentes Resultados en Pruebas Saber",
+      title: "Competencia Los derechos humanos del grado 601",
       date: "15 de Octubre, 2025",
       icon: Trophy,
-      summary: "Nuestros estudiantes obtuvieron sobresalientes resultados en las pruebas Saber.",
-      fullContent: "Nuestros estudiantes obtuvieron sobresalientes resultados en las pruebas Saber, ubicándose entre los mejores del departamento. Este logro es el resultado del esfuerzo conjunto de estudiantes, docentes y padres de familia. Los resultados muestran un incremento del 15% en matemáticas y un 12% en lenguaje comparado con el año anterior. Felicitamos a toda la comunidad educativa por este importante logro que nos posiciona como una institución de excelencia académica."
+      summary: "Los estudiantes del grado 601 participaron en la competencia sobre derechos humanos.",
+      fullContent: "Los estudiantes del grado 601 participaron exitosamente en la competencia sobre derechos humanos, demostrando un excelente conocimiento y comprensión de los valores fundamentales. Este logro es el resultado del esfuerzo conjunto de estudiantes, docentes y padres de familia. Los estudiantes mostraron gran compromiso en la preparación y presentación de sus proyectos sobre derechos humanos. Felicitamos a toda la comunidad educativa por este importante logro que fortalece la formación ciudadana de nuestros estudiantes."
     },
     {
       title: "Feria de Ciencias 2025",
