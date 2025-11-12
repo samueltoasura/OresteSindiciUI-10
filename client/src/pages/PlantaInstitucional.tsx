@@ -57,12 +57,12 @@ export default function PlantaInstitucional() {
     { name: "Olivia Vanegas", subject: "1001", initials: "OV", image: oliviaImage, translateY: "-translate-y-6" },
     { name: "Fabian Andres Cao", subject: "1002", initials: "FAC", image: fabianCaoImage, translateY: "-translate-y-6" },
     { name: "Juan David Firigua", subject: "11", initials: "JDF", image: juanDavidImage, translateY: "-translate-y-6" },
-    { name: "Samuel Toasura Torra", subject: "11-01", initials: "STT", image: samuelImage, translateY: "-translate-y-6" },
-    { name: "Leonardo Peralta", subject: "11-02", initials: "LP", image: leonardoImage, translateY: "-translate-y-6" },
-    { name: "Sonia Yaned Porras", subject: "11-03", initials: "SYP", image: soniaImage, translateY: "translate-y-0" },
-    { name: "Marlen Constansa Pardo", subject: "Área", initials: "MCP", image: marlenImage, translateY: "translate-y-0" },
-    { name: "Eduardo Martinez Bautista", subject: "Área", initials: "EMB", image: eduardoImage, translateY: "-translate-y-1" },
-    { name: "Leonidas Lara", subject: "Área", initials: "LL" }
+    { name: "Samuel Toasura Torra", subject: "", initials: "STT", image: samuelImage, translateY: "-translate-y-6" },
+    { name: "Leonardo Peralta", subject: "", initials: "LP", image: leonardoImage, translateY: "-translate-y-6" },
+    { name: "Sonia Yaned Porras", subject: "", initials: "SYP", image: soniaImage, translateY: "translate-y-0" },
+    { name: "Marlen Constansa Pardo", subject: "", initials: "MCP", image: marlenImage, translateY: "translate-y-0" },
+    { name: "Eduardo Martinez Bautista", subject: "", initials: "EMB", image: eduardoImage, translateY: "-translate-y-1" },
+    { name: "Leonidas Lara", subject: "", initials: "LL" }
   ];
 
   return (
