@@ -42,7 +42,7 @@ export default function PlantaInstitucional() {
   const staff = [
     { name: "Luz Jackelin Sanchez Solorzano", role: "Rectora", initials: "LJS" },
     { name: "Jose Fabian Agudelo Rodriguez", role: "Coordinador", initials: "JFAR", image: coordinadorImage },
-    { name: "Jefferson Peña", role: "Psicólogo", initials: "JP", image: psicologoImage }
+    { name: "Jefferson Peña", role: "Psicólogo", initials: "JP", image: psicologoImage, translateY: "-translate-y-16" }
   ];
 
   const docentesPrimaria = [
