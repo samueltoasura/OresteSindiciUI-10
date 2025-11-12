@@ -28,7 +28,7 @@ export default function PlantaInstitucional() {
 
   const docentesSecundaria = [
     { name: "Diego Alejandro Martinez", subject: "601", initials: "DAM", image: diegoImage },
-    { name: "Jhonathan Chacon", subject: "602", initials: "JC", image: jhonathanImage },
+    { name: "Jhonathan Chacon", subject: "602", initials: "JC", image: jhonathanImage, translateY: "-translate-y-4" },
     { name: "Jesus Ivan Verano", subject: "603", initials: "JIV" },
     { name: "Nareth Perez", subject: "701", initials: "NP" },
     { name: "Nelson Miranda", subject: "702", initials: "NM" },
@@ -211,7 +211,7 @@ export default function PlantaInstitucional() {
                   <CardContent className="pt-4">
                     <div className="flex flex-col items-center text-center">
                       <Avatar className="w-16 h-16 mb-3 overflow-hidden">
-                        {person.image && <AvatarImage src={person.image} alt={person.name} className="object-cover w-full h-full scale-[2] -translate-y-8" />}
+                        {person.image && <AvatarImage src={person.image} alt={person.name} className={`object-cover w-full h-full scale-[2] ${person.translateY || '-translate-y-8'}`} />}
                         <AvatarFallback className="bg-chart-2 text-white text-sm font-semibold">
                           {person.initials}
                         </AvatarFallback>
