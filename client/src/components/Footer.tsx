@@ -22,7 +22,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 flex-shrink-0" />
-                <p className="text-sm opacity-90">info@orestesindici.edu</p>
+                <p className="text-sm opacity-90">secretaria@orestesindici.edu.co</p>
               </div>
             </div>
           </div>
