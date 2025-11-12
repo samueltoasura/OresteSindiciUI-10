@@ -7,6 +7,8 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Button } from "@/components/ui/button";
 import type { LucideIcon } from "lucide-react";
 import competenciaImage from "@assets/Imagen de WhatsApp 2025-11-10 a las 09.40.52_af06f7a6_1763005432692.jpg";
+import isabela1Image from "@assets/image_1763007112215.png";
+import isabela2Image from "@assets/image_1763007122758.png";
 
 interface Comunicado {
   title: string;
@@ -23,6 +25,7 @@ interface Noticia {
   summary: string;
   fullContent: string;
   image?: string;
+  images?: string[];
 }
 
 export default function Noticias() {
@@ -76,7 +79,8 @@ export default function Noticias() {
       date: "5 de Octubre, 2025",
       icon: Sparkles,
       summary: "Isabela Cruz Morales representará a nuestro municipio de Nilo en el nacional de Karate Do.",
-      fullContent: "Queremos desde aquí enviar un fuerte abrazo y muchos ánimos a nuestra querida estudiante Isabela Cruz Morales quién va a competir en el nacional de Karate Do representando a nuestro municipio de Nilo. Mucha fuerza y energía positiva te enviamos Isabela. Estás para grandes cosas!"
+      fullContent: "Queremos desde aquí enviar un fuerte abrazo y muchos ánimos a nuestra querida estudiante Isabela Cruz Morales quién va a competir en el nacional de Karate Do representando a nuestro municipio de Nilo. Mucha fuerza y energía positiva te enviamos Isabela. Estás para grandes cosas!",
+      images: [isabela1Image, isabela2Image]
     }
   ];
 
@@ -279,6 +283,18 @@ export default function Noticias() {
                       alt={selectedNoticia.title}
                       className="w-full rounded-md object-cover"
                     />
+                  </div>
+                )}
+                {selectedNoticia.images && selectedNoticia.images.length > 0 && (
+                  <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {selectedNoticia.images.map((img, index) => (
+                      <img 
+                        key={index}
+                        src={img} 
+                        alt={`${selectedNoticia.title} - imagen ${index + 1}`}
+                        className="w-full rounded-md object-cover"
+                      />
+                    ))}
                   </div>
                 )}
                 <p className="text-foreground leading-relaxed">
