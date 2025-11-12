@@ -50,7 +50,7 @@ export default function PlantaInstitucional() {
     { name: "Luz Jackelin Sanchez Solorzano", role: "Rectora", initials: "LJS" },
     { name: "Jose Fabian Agudelo Rodriguez", role: "Coordinador", initials: "JFAR", image: coordinadorImage },
     { name: "Jefferson Peña", role: "Psicólogo", initials: "JP", image: psicologoImage, translateY: "-translate-y-16" },
-    { name: "Magnolia Herrera Camacho", role: "PTA", initials: "MHC", image: magnoliaImage, translateY: "-translate-y-4" }
+    { name: "Magnolia Herrera Camacho", role: "PTA", initials: "MHC", image: magnoliaImage, translateY: "-translate-y-2" }
   ];
 
   const docentesPrimaria = [
