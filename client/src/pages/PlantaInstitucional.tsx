@@ -134,7 +134,7 @@ export default function PlantaInstitucional() {
                 <CardTitle>Docentes Primaria</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-3xl font-bold text-foreground mb-2">25</p>
+                <p className="text-3xl font-bold text-foreground mb-2">9</p>
                 <p className="text-muted-foreground">
                   Profesionales especializados en educación básica primaria
                 </p>
