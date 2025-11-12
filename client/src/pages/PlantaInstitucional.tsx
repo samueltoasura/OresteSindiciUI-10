@@ -44,15 +44,15 @@ export default function PlantaInstitucional() {
   ];
 
   const docentesPrimaria = [
-    { name: "Jaqueline Salazar Alvarado", subject: "Transición", initials: "JSA", image: jaquelineImage, translateY: "-translate-y-4" },
-    { name: "Edgar González", subject: "2° Grado", initials: "EG", image: edgarImage, translateY: "-translate-y-6" },
-    { name: "Armando García Díaz", subject: "3° Grado", initials: "AGD", image: armandoImage, translateY: "-translate-y-6" },
-    { name: "Yolanda Rubiano", subject: "4° Grado", initials: "YR", image: yolandaImage, translateY: "-translate-y-6" },
-    { name: "Nohora Romero", subject: "5° Grado", initials: "NR", image: nohoraImage, translateY: "-translate-y-6" },
-    { name: "Esperanza Velázquez", subject: "1° Grado", initials: "EV", image: esperanzaImage, translateY: "-translate-y-6" },
-    { name: "Ana María García", subject: "Primaria", initials: "AMG", image: anaMariaImage, translateY: "-translate-y-4" },
-    { name: "María Elena Ramírez", subject: "Primaria", initials: "MER", image: mariaHelenaImage, translateY: "-translate-y-5" },
-    { name: "Luz Amparo Morales", subject: "Primaria", initials: "LAM", image: amparoImage, translateY: "-translate-y-6" }
+    { name: "Jaqueline Salazar Alvarado", subject: "", initials: "JSA", image: jaquelineImage, translateY: "-translate-y-4" },
+    { name: "Edgar González", subject: "", initials: "EG", image: edgarImage, translateY: "-translate-y-6" },
+    { name: "Armando García Díaz", subject: "", initials: "AGD", image: armandoImage, translateY: "-translate-y-6" },
+    { name: "Yolanda Rubiano", subject: "", initials: "YR", image: yolandaImage, translateY: "-translate-y-6" },
+    { name: "Nohora Romero", subject: "", initials: "NR", image: nohoraImage, translateY: "-translate-y-6" },
+    { name: "Esperanza Velázquez", subject: "", initials: "EV", image: esperanzaImage, translateY: "-translate-y-6" },
+    { name: "Ana María García", subject: "", initials: "AMG", image: anaMariaImage, translateY: "-translate-y-4" },
+    { name: "María Elena Ramírez", subject: "", initials: "MER", image: mariaHelenaImage, translateY: "-translate-y-5" },
+    { name: "Luz Amparo Morales", subject: "", initials: "LAM", image: amparoImage, translateY: "-translate-y-6" }
   ];
 
   const docentesSecundaria = [
