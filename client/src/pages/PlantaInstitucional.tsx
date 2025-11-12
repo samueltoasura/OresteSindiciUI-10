@@ -17,6 +17,7 @@ import millerImage from "@assets/miller_1762981114257.png";
 import oliviaImage from "@assets/olivia_1762981224445.png";
 import fabianCaoImage from "@assets/fabian cao_1762981321144.png";
 import juanDavidImage from "@assets/juan david_1762981418368.png";
+import samuelImage from "@assets/samuel tosa_1762981503479.png";
 import janethImage from "@assets/janeth_1762979340795.png";
 
 export default function PlantaInstitucional() {
@@ -51,7 +52,7 @@ export default function PlantaInstitucional() {
     { name: "Olivia Vanegas", subject: "1001", initials: "OV", image: oliviaImage, translateY: "-translate-y-6" },
     { name: "Fabian Andres Cao", subject: "1002", initials: "FAC", image: fabianCaoImage, translateY: "-translate-y-6" },
     { name: "Juan David Firigua", subject: "11", initials: "JDF", image: juanDavidImage, translateY: "-translate-y-6" },
-    { name: "Samuel Toasura Torra", subject: "1101", initials: "STT" },
+    { name: "Samuel Toasura Torra", subject: "1101", initials: "STT", image: samuelImage, translateY: "-translate-y-6" },
     { name: "Leonardo Peralta", subject: "1102", initials: "LP" },
     { name: "Sonia Yaned Porras", subject: "1103", initials: "SYP" },
     { name: "Marlen Constansa Pardo", subject: "Docente", initials: "MCP" },
