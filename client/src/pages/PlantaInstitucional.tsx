@@ -7,6 +7,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { useState } from "react";
 import coordinadorImage from "@assets/coordinador_1762976498636.png";
 import diegoImage from "@assets/diego_1762977008002.png";
+import jhonathanImage from "@assets/jhonatan_1762977247754.png";
 
 export default function PlantaInstitucional() {
   const [showDocentesPrimaria, setShowDocentesPrimaria] = useState(false);
@@ -27,7 +28,7 @@ export default function PlantaInstitucional() {
 
   const docentesSecundaria = [
     { name: "Diego Alejandro Martinez", subject: "601", initials: "DAM", image: diegoImage },
-    { name: "Jhonathan Chacon", subject: "602", initials: "JC" },
+    { name: "Jhonathan Chacon", subject: "602", initials: "JC", image: jhonathanImage },
     { name: "Jesus Ivan Verano", subject: "603", initials: "JIV" },
     { name: "Nareth Perez", subject: "701", initials: "NP" },
     { name: "Nelson Miranda", subject: "702", initials: "NM" },
