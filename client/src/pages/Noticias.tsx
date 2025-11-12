@@ -72,11 +72,11 @@ export default function Noticias() {
       fullContent: "Se informa a toda la comunidad educativa que la entrega de boletines correspondientes al tercer periodo académico se realizará en las instalaciones de la escuela Policarpa Salavarrieta del Colegio Oreste Sindici. Los padres de familia y acudientes podrán recibir los informes académicos de sus hijos donde se refleja el desempeño y avance durante este periodo. Agradecemos la asistencia puntual de los padres de familia y su compromiso con el proceso educativo de nuestros estudiantes."
     },
     {
-      title: "Nueva Aula de Tecnología",
+      title: "Apoyo a nuestra estudiante Isabela Cruz Morales en el Nacional de Karate Do",
       date: "5 de Octubre, 2025",
       icon: Sparkles,
-      summary: "Inauguramos nuestra nueva aula de tecnología equipada con computadores de última generación.",
-      fullContent: "Inauguramos nuestra nueva aula de tecnología equipada con computadores de última generación y herramientas digitales. El espacio cuenta con 40 estaciones de trabajo con equipos de alto rendimiento, pizarra digital interactiva, impresora 3D, kit de robótica educativa y conexión de alta velocidad a internet. Esta inversión representa un paso importante en nuestro compromiso con la educación de calidad y la alfabetización digital. El aula estará disponible para todas las áreas académicas y permitirá desarrollar competencias tecnológicas fundamentales para el siglo XXI."
+      summary: "Isabela Cruz Morales representará a nuestro municipio de Nilo en el nacional de Karate Do.",
+      fullContent: "Queremos desde aquí enviar un fuerte abrazo y muchos ánimos a nuestra querida estudiante Isabela Cruz Morales quién va a competir en el nacional de Karate Do representando a nuestro municipio de Nilo. Mucha fuerza y energía positiva te enviamos Isabela. Estás para grandes cosas!"
     }
   ];
 
