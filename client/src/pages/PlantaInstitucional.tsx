@@ -31,7 +31,7 @@ export default function PlantaInstitucional() {
     { name: "Diego Alejandro Martinez", subject: "601", initials: "DAM", image: diegoImage },
     { name: "Jhonathan Chacon", subject: "602", initials: "JC", image: jhonathanImage, translateY: "-translate-y-4" },
     { name: "Jesus Ivan Verano", subject: "603", initials: "JIV" },
-    { name: "Nareth Perez", subject: "701", initials: "NP", image: narethImage, translateY: "-translate-y-4" },
+    { name: "Nareth Perez", subject: "701", initials: "NP", image: narethImage, translateY: "-translate-y-6" },
     { name: "Nelson Miranda", subject: "702", initials: "NM" },
     { name: "Janeth Rojas Lievano", subject: "703", initials: "JRL" },
     { name: "Cruz Maria Cruz Huertas", subject: "801", initials: "CMCH" },
