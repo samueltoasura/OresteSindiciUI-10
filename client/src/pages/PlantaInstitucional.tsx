@@ -44,7 +44,7 @@ export default function PlantaInstitucional() {
     { name: "Carolina Amaya Bustos", subject: "802", initials: "CAB", image: carolinaImage, translateY: "-translate-y-6" },
     { name: "Martin Honorio Castro", subject: "803", initials: "MHC", image: martinImage, translateY: "-translate-y-6" },
     { name: "Sandra Yamileth Cubillos", subject: "901", initials: "SYC" },
-    { name: "Miller Humberto Lozano", subject: "902", initials: "MHL", image: millerImage, translateY: "-translate-y-6" },
+    { name: "Miller Humberto Lozano", subject: "902", initials: "MHL", image: millerImage, translateY: "-translate-y-3" },
     { name: "Olivia Vanegas", subject: "1001", initials: "OV" },
     { name: "Fabian Andres Cao", subject: "1002", initials: "FAC" },
     { name: "Juan David Firigua", subject: "11", initials: "JDF" },
