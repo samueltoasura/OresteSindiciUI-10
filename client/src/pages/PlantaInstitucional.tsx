@@ -39,7 +39,6 @@ import magnoliaImage from "@assets/magnolia_1763001736634.png";
 export default function PlantaInstitucional() {
   const [showDocentesPrimaria, setShowDocentesPrimaria] = useState(false);
   const [showDocentesSecundaria, setShowDocentesSecundaria] = useState(false);
-  const [showPersonalApoyo, setShowPersonalApoyo] = useState(false);
   
   const staff = [
     { name: "Luz Jackelin Sanchez Solorzano", role: "Rectora", initials: "LJS" },
@@ -83,11 +82,6 @@ export default function PlantaInstitucional() {
     { name: "Leonidas Lara", subject: "", initials: "LL" }
   ];
 
-  const personalApoyo = [
-    { name: "Jefferson Peña", role: "Psicólogo", initials: "JP", image: psicologoImage, translateY: "-translate-y-16" },
-    { name: "Magnolia Herrera Camacho", role: "PTA", initials: "MHC", image: magnoliaImage, translateY: "-translate-y-4" }
-  ];
-
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -117,7 +111,7 @@ export default function PlantaInstitucional() {
                   <CardContent className="pt-6">
                     <div className="flex flex-col items-center text-center">
                       <Avatar className="w-48 h-48 mb-4 overflow-hidden">
-                        {person.image && <AvatarImage src={person.image} alt={person.name} className={`object-cover w-full h-full ${person.scale || 'scale-[2]'} ${person.translateY || '-translate-y-8'}`} />}
+                        {person.image && <AvatarImage src={person.image} alt={person.name} className={`object-cover w-full h-full scale-[2] ${person.translateY || '-translate-y-8'}`} />}
                         <AvatarFallback className="bg-chart-4 text-white text-2xl font-semibold">
                           {person.initials}
                         </AvatarFallback>
@@ -170,11 +164,7 @@ export default function PlantaInstitucional() {
               </CardContent>
             </Card>
 
-            <Card 
-              className="hover-elevate cursor-pointer"
-              onClick={() => setShowPersonalApoyo(true)}
-              data-testid="card-personal-apoyo"
-            >
+            <Card className="hover-elevate">
               <CardHeader>
                 <div className="w-12 h-12 rounded-full bg-chart-4 flex items-center justify-center mb-3">
                   <UserCheck className="w-6 h-6 text-white" />
@@ -182,7 +172,7 @@ export default function PlantaInstitucional() {
                 <CardTitle>Personal de Apoyo</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-3xl font-bold text-foreground mb-2">2</p>
+                <p className="text-3xl font-bold text-foreground mb-2">0</p>
                 <p className="text-muted-foreground">
                   Psicólogos, orientadores y personal especializado
                 </p>
@@ -262,37 +252,6 @@ export default function PlantaInstitucional() {
                       </Avatar>
                       <h4 className="font-semibold text-foreground text-sm">{person.name}</h4>
                       <p className="text-xs text-muted-foreground">{person.subject}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </DialogContent>
-      </Dialog>
-
-      <Dialog open={showPersonalApoyo} onOpenChange={setShowPersonalApoyo}>
-        <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle className="text-2xl font-bold">Personal de Apoyo</DialogTitle>
-          </DialogHeader>
-          <div className="mt-4">
-            <p className="text-muted-foreground mb-6">
-              Nuestro equipo de apoyo está comprometido con el bienestar y desarrollo integral de la comunidad educativa.
-            </p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {personalApoyo.map((person) => (
-                <Card key={person.name} className="hover-elevate">
-                  <CardContent className="pt-4">
-                    <div className="flex flex-col items-center text-center">
-                      <Avatar className="w-16 h-16 mb-3 overflow-hidden">
-                        {person.image && <AvatarImage src={person.image} alt={person.name} className={`object-cover w-full h-full scale-[2] ${person.translateY || '-translate-y-8'}`} />}
-                        <AvatarFallback className="bg-chart-2 text-white text-sm font-semibold">
-                          {person.initials}
-                        </AvatarFallback>
-                      </Avatar>
-                      <h4 className="font-semibold text-foreground text-sm">{person.name}</h4>
-                      <p className="text-xs text-muted-foreground">{person.role}</p>
                     </div>
                   </CardContent>
                 </Card>
