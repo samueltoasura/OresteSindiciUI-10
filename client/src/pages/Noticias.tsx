@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import type { LucideIcon } from "lucide-react";
+import competenciaImage from "@assets/Imagen de WhatsApp 2025-11-10 a las 09.40.52_af06f7a6_1763005432692.jpg";
 
 interface Comunicado {
   title: string;
@@ -21,6 +22,7 @@ interface Noticia {
   icon: LucideIcon;
   summary: string;
   fullContent: string;
+  image?: string;
 }
 
 export default function Noticias() {
@@ -59,7 +61,8 @@ export default function Noticias() {
       date: "15 de Octubre, 2025",
       icon: Trophy,
       summary: "Los estudiantes del grado 601 participaron en la competencia sobre derechos humanos.",
-      fullContent: "Los estudiantes del grado 601 participaron exitosamente en la competencia sobre derechos humanos, demostrando un excelente conocimiento y comprensión de los valores fundamentales. Este logro es el resultado del esfuerzo conjunto de estudiantes, docentes y padres de familia. Los estudiantes mostraron gran compromiso en la preparación y presentación de sus proyectos sobre derechos humanos. Felicitamos a toda la comunidad educativa por este importante logro que fortalece la formación ciudadana de nuestros estudiantes."
+      fullContent: "Los estudiantes del grado 601 participaron exitosamente en la competencia sobre derechos humanos, demostrando un excelente conocimiento y comprensión de los valores fundamentales. Este logro es el resultado del esfuerzo conjunto de estudiantes, docentes y padres de familia. Los estudiantes mostraron gran compromiso en la preparación y presentación de sus proyectos sobre derechos humanos. Felicitamos a toda la comunidad educativa por este importante logro que fortalece la formación ciudadana de nuestros estudiantes.",
+      image: competenciaImage
     },
     {
       title: "Feria de Ciencias 2025",
@@ -269,6 +272,15 @@ export default function Noticias() {
                 </DialogDescription>
               </DialogHeader>
               <div className="mt-4">
+                {selectedNoticia.image && (
+                  <div className="mb-6">
+                    <img 
+                      src={selectedNoticia.image} 
+                      alt={selectedNoticia.title}
+                      className="w-full rounded-md object-cover"
+                    />
+                  </div>
+                )}
                 <p className="text-foreground leading-relaxed">
                   {selectedNoticia.fullContent}
                 </p>
