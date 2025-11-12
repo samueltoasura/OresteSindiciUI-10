@@ -58,7 +58,7 @@ export default function Noticias() {
   const noticias: Noticia[] = [
     {
       title: "Competencia Los derechos humanos del grado 601",
-      date: "15 de Octubre, 2025",
+      date: "6 de Noviembre, 2025",
       icon: Trophy,
       summary: "Los estudiantes del grado 601 participaron en la competencia sobre derechos humanos.",
       fullContent: "Los estudiantes del grado 601 participaron exitosamente en la competencia sobre derechos humanos, demostrando un excelente conocimiento y comprensión de los valores fundamentales. Este logro es el resultado del esfuerzo conjunto de estudiantes, docentes y padres de familia. Los estudiantes mostraron gran compromiso en la preparación y presentación de sus proyectos sobre derechos humanos. Felicitamos a toda la comunidad educativa por este importante logro que fortalece la formación ciudadana de nuestros estudiantes.",
