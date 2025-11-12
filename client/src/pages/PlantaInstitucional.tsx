@@ -11,6 +11,7 @@ import jhonathanImage from "@assets/jhonatan_1762977247754.png";
 import narethImage from "@assets/nareth_1762977370937.png";
 import nelsonImage from "@assets/nelson_1762977483270.png";
 import cruzMariaImage from "@assets/cruz maria_1762979012687.png";
+import janethImage from "@assets/janeth_1762979340795.png";
 
 export default function PlantaInstitucional() {
   const [showDocentesPrimaria, setShowDocentesPrimaria] = useState(false);
@@ -35,7 +36,7 @@ export default function PlantaInstitucional() {
     { name: "Jesus Ivan Verano", subject: "603", initials: "JIV" },
     { name: "Nareth Perez", subject: "701", initials: "NP", image: narethImage, translateY: "-translate-y-6" },
     { name: "Nelson Miranda", subject: "702", initials: "NM", image: nelsonImage, translateY: "-translate-y-4" },
-    { name: "Janeth Rojas Lievano", subject: "703", initials: "JRL" },
+    { name: "Janeth Rojas Lievano", subject: "703", initials: "JRL", image: janethImage, translateY: "-translate-y-4" },
     { name: "Cruz Maria Huertas", subject: "801", initials: "CMH", image: cruzMariaImage, translateY: "-translate-y-6" },
     { name: "Carolina Amaya Bustos", subject: "802", initials: "CAB" },
     { name: "Martin Honorio Castro", subject: "803", initials: "MHC" },
