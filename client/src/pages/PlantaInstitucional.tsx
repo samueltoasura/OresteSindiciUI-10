@@ -23,6 +23,7 @@ import leonardoImage from "@assets/leonardo_1762981918861.png";
 import soniaImage from "@assets/sonia_1762982033938.png";
 import marlenImage from "@assets/marlen_1762982127814.png";
 import eduardoImage from "@assets/eduardo_1762982353725.png";
+import jaquelineImage from "@assets/jaquelin policarpa_1762982867621.png";
 import janethImage from "@assets/janeth_1762979340795.png";
 
 export default function PlantaInstitucional() {
@@ -35,7 +36,7 @@ export default function PlantaInstitucional() {
   ];
 
   const docentesPrimaria = [
-    { name: "Jaqueline Salazar Alvarado", subject: "Transición", initials: "JSA" },
+    { name: "Jaqueline Salazar Alvarado", subject: "Transición", initials: "JSA", image: jaquelineImage, translateY: "-translate-y-6" },
     { name: "Carlos Fernández Silva", subject: "2° Grado", initials: "CFS" },
     { name: "Ana Beatriz Torres", subject: "3° Grado", initials: "ABT" },
     { name: "Jorge Luis Mendoza", subject: "4° Grado", initials: "JLM" },
