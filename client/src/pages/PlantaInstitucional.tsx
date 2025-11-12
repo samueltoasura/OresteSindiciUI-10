@@ -6,6 +6,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useState } from "react";
 import coordinadorImage from "@assets/coordinador_1762976498636.png";
+import diegoImage from "@assets/diego_1762977008002.png";
 
 export default function PlantaInstitucional() {
   const [showDocentesPrimaria, setShowDocentesPrimaria] = useState(false);
@@ -25,7 +26,7 @@ export default function PlantaInstitucional() {
   ];
 
   const docentesSecundaria = [
-    { name: "Diego Alejandro Martinez", subject: "601", initials: "DAM" },
+    { name: "Diego Alejandro Martinez", subject: "601", initials: "DAM", image: diegoImage },
     { name: "Jhonathan Chacon", subject: "602", initials: "JC" },
     { name: "Jesus Ivan Verano", subject: "603", initials: "JIV" },
     { name: "Nareth Perez", subject: "701", initials: "NP" },
@@ -208,7 +209,8 @@ export default function PlantaInstitucional() {
                 <Card key={person.name} className="hover-elevate">
                   <CardContent className="pt-4">
                     <div className="flex flex-col items-center text-center">
-                      <Avatar className="w-16 h-16 mb-3">
+                      <Avatar className="w-16 h-16 mb-3 overflow-hidden">
+                        {person.image && <AvatarImage src={person.image} alt={person.name} className="object-cover w-full h-full scale-[2] -translate-y-8" />}
                         <AvatarFallback className="bg-chart-2 text-white text-sm font-semibold">
                           {person.initials}
                         </AvatarFallback>
