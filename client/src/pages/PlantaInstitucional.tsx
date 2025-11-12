@@ -30,6 +30,9 @@ import yolandaImage from "@assets/yolanda escu_1762982954362.png";
 import nohoraImage from "@assets/nohora escuela_1762982964581.png";
 import esperanzaImage from "@assets/esperanza_1762982977725.png";
 import janethImage from "@assets/janeth_1762979340795.png";
+import anaMariaImage from "@assets/ana maria_1762996676958.png";
+import mariaHelenaImage from "@assets/Maria Helena policarpa_1762996694562.png";
+import amparoImage from "@assets/amparo escuel_1762996708829.png";
 
 export default function PlantaInstitucional() {
   const [showDocentesPrimaria, setShowDocentesPrimaria] = useState(false);
@@ -46,7 +49,10 @@ export default function PlantaInstitucional() {
     { name: "Ana Beatriz Torres", subject: "3° Grado", initials: "ABT", image: armandoImage, translateY: "-translate-y-6" },
     { name: "Jorge Luis Mendoza", subject: "4° Grado", initials: "JLM", image: yolandaImage, translateY: "-translate-y-6" },
     { name: "Patricia Ramírez Castro", subject: "5° Grado", initials: "PRC", image: nohoraImage, translateY: "-translate-y-6" },
-    { name: "Esperanza Docente", subject: "1° Grado", initials: "ED", image: esperanzaImage, translateY: "-translate-y-6" }
+    { name: "Esperanza Docente", subject: "1° Grado", initials: "ED", image: esperanzaImage, translateY: "-translate-y-6" },
+    { name: "Ana María", subject: "Primaria", initials: "AM", image: anaMariaImage, translateY: "-translate-y-4" },
+    { name: "María Helena Policarpa", subject: "Primaria", initials: "MHP", image: mariaHelenaImage, translateY: "-translate-y-5" },
+    { name: "Amparo Escuela", subject: "Primaria", initials: "AE", image: amparoImage, translateY: "-translate-y-6" }
   ];
 
   const docentesSecundaria = [
