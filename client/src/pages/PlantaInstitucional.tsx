@@ -33,6 +33,7 @@ import janethImage from "@assets/janeth_1762979340795.png";
 import anaMariaImage from "@assets/ana maria_1762996676958.png";
 import mariaHelenaImage from "@assets/Maria Helena policarpa_1762996694562.png";
 import amparoImage from "@assets/amparo escuel_1762996708829.png";
+import psicologoImage from "@assets/psicologo_1763000695377.png";
 
 export default function PlantaInstitucional() {
   const [showDocentesPrimaria, setShowDocentesPrimaria] = useState(false);
@@ -40,7 +41,8 @@ export default function PlantaInstitucional() {
   
   const staff = [
     { name: "Luz Jackelin Sanchez Solorzano", role: "Rectora", initials: "LJS" },
-    { name: "Jose Fabian Agudelo Rodriguez", role: "Coordinador", initials: "JFAR", image: coordinadorImage }
+    { name: "Jose Fabian Agudelo Rodriguez", role: "Coordinador", initials: "JFAR", image: coordinadorImage },
+    { name: "Jefferson Peña", role: "Psicólogo", initials: "JP", image: psicologoImage }
   ];
 
   const docentesPrimaria = [
