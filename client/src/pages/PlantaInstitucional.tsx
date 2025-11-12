@@ -2,9 +2,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Users, UserCheck, BookOpen, Briefcase } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useState } from "react";
+import coordinadorImage from "@assets/coordinador_1762976498636.png";
 
 export default function PlantaInstitucional() {
   const [showDocentesPrimaria, setShowDocentesPrimaria] = useState(false);
@@ -12,7 +13,7 @@ export default function PlantaInstitucional() {
   
   const staff = [
     { name: "Luz Jackelin Sanchez Solorzano", role: "Rectora", initials: "LJS" },
-    { name: "Jose Fabian Agudelo Rodriguez", role: "Coordinador", initials: "JFAR" }
+    { name: "Jose Fabian Agudelo Rodriguez", role: "Coordinador", initials: "JFAR", image: coordinadorImage }
   ];
 
   const docentesPrimaria = [
@@ -75,6 +76,7 @@ export default function PlantaInstitucional() {
                   <CardContent className="pt-6">
                     <div className="flex flex-col items-center text-center">
                       <Avatar className="w-20 h-20 mb-4">
+                        {person.image && <AvatarImage src={person.image} alt={person.name} />}
                         <AvatarFallback className="bg-chart-4 text-white text-lg font-semibold">
                           {person.initials}
                         </AvatarFallback>
