@@ -203,7 +203,8 @@ export default function PlantaInstitucional() {
                 <Card key={person.name} className="hover-elevate">
                   <CardContent className="pt-4">
                     <div className="flex flex-col items-center text-center">
-                      <Avatar className="w-16 h-16 mb-3">
+                      <Avatar className="w-16 h-16 mb-3 overflow-hidden">
+                        {person.image && <AvatarImage src={person.image} alt={person.name} className={`object-cover w-full h-full scale-[2] ${person.translateY || '-translate-y-8'}`} />}
                         <AvatarFallback className="bg-chart-2 text-white text-sm font-semibold">
                           {person.initials}
                         </AvatarFallback>
