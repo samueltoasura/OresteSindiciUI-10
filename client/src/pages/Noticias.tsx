@@ -65,11 +65,11 @@ export default function Noticias() {
       image: competenciaImage
     },
     {
-      title: "Feria de Ciencias 2025",
+      title: "Entrega de boletines de III Periodo escuela Policarpa Salavarrieta, COLEGIO Oreste Sindici",
       date: "10 de Octubre, 2025",
       icon: Star,
-      summary: "Exitosa participación en la Feria de Ciencias con proyectos innovadores.",
-      fullContent: "Exitosa participación en la Feria de Ciencias con proyectos innovadores desarrollados por nuestros estudiantes. Durante el evento, se presentaron más de 30 proyectos en áreas como robótica, energías renovables, biotecnología y ciencias ambientales. Tres de nuestros proyectos fueron premiados a nivel departamental: 'Sistema de riego inteligente', 'Purificador de agua con energía solar' y 'Robot clasificador de residuos'. Agradecemos a los docentes asesores y felicitamos a todos los estudiantes participantes."
+      summary: "Información sobre la entrega de boletines del tercer periodo académico.",
+      fullContent: "Se informa a toda la comunidad educativa que la entrega de boletines correspondientes al tercer periodo académico se realizará en las instalaciones de la escuela Policarpa Salavarrieta del Colegio Oreste Sindici. Los padres de familia y acudientes podrán recibir los informes académicos de sus hijos donde se refleja el desempeño y avance durante este periodo. Agradecemos la asistencia puntual de los padres de familia y su compromiso con el proceso educativo de nuestros estudiantes."
     },
     {
       title: "Nueva Aula de Tecnología",
