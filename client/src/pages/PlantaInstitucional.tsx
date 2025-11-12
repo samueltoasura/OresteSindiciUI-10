@@ -41,7 +41,7 @@ export default function PlantaInstitucional() {
   ];
 
   const docentesPrimaria = [
-    { name: "Jaqueline Salazar Alvarado", subject: "Transición", initials: "JSA", image: jaquelineImage, translateY: "-translate-y-6" },
+    { name: "Jaqueline Salazar Alvarado", subject: "Transición", initials: "JSA", image: jaquelineImage, translateY: "-translate-y-4" },
     { name: "Carlos Fernández Silva", subject: "2° Grado", initials: "CFS", image: edgarImage, translateY: "-translate-y-6" },
     { name: "Ana Beatriz Torres", subject: "3° Grado", initials: "ABT", image: armandoImage, translateY: "-translate-y-6" },
     { name: "Jorge Luis Mendoza", subject: "4° Grado", initials: "JLM", image: yolandaImage, translateY: "-translate-y-6" },
