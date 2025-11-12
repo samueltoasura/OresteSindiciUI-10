@@ -44,7 +44,7 @@ export default function PlantaInstitucional() {
     { name: "Luz Jackelin Sanchez Solorzano", role: "Rectora", initials: "LJS" },
     { name: "Jose Fabian Agudelo Rodriguez", role: "Coordinador", initials: "JFAR", image: coordinadorImage },
     { name: "Jefferson Peña", role: "Psicólogo", initials: "JP", image: psicologoImage, translateY: "-translate-y-16" },
-    { name: "Magnolia Herrera Camacho", role: "PTA", initials: "MHC", image: magnoliaImage, translateY: "-translate-y-4" }
+    { name: "Magnolia Herrera Camacho", role: "PTA", initials: "MHC", image: magnoliaImage, translateY: "-translate-y-4", scale: "scale-[1.7]" }
   ];
 
   const docentesPrimaria = [
@@ -111,7 +111,7 @@ export default function PlantaInstitucional() {
                   <CardContent className="pt-6">
                     <div className="flex flex-col items-center text-center">
                       <Avatar className="w-48 h-48 mb-4 overflow-hidden">
-                        {person.image && <AvatarImage src={person.image} alt={person.name} className={`object-cover w-full h-full scale-[2] ${person.translateY || '-translate-y-8'}`} />}
+                        {person.image && <AvatarImage src={person.image} alt={person.name} className={`object-cover w-full h-full ${person.scale || 'scale-[2]'} ${person.translateY || '-translate-y-8'}`} />}
                         <AvatarFallback className="bg-chart-4 text-white text-2xl font-semibold">
                           {person.initials}
                         </AvatarFallback>
