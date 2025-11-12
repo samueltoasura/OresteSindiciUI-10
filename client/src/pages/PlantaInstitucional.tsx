@@ -58,8 +58,8 @@ export default function PlantaInstitucional() {
     { name: "Juan David Firigua", subject: "11", initials: "JDF", image: juanDavidImage, translateY: "-translate-y-6" },
     { name: "Samuel Toasura Torra", subject: "1101", initials: "STT", image: samuelImage, translateY: "-translate-y-6" },
     { name: "Leonardo Peralta", subject: "1102", initials: "LP", image: leonardoImage, translateY: "-translate-y-6" },
-    { name: "Sonia Yaned Porras", subject: "1103", initials: "SYP", image: soniaImage, translateY: "-translate-y-6" },
-    { name: "Marlen Constansa Pardo", subject: "Docente", initials: "MCP", image: marlenImage, translateY: "-translate-y-4" },
+    { name: "Sonia Yaned Porras", subject: "1103", initials: "SYP", image: soniaImage, translateY: "-translate-y-2" },
+    { name: "Marlen Constansa Pardo", subject: "Docente", initials: "MCP", image: marlenImage, translateY: "translate-y-0" },
     { name: "Eduardo Martinez Bautista", subject: "Docente", initials: "EMB" },
     { name: "Leonidas Lara", subject: "Docente", initials: "LL" }
   ];
