@@ -44,6 +44,7 @@ export default function PlantaInstitucional() {
   const [showDocentesPrimaria, setShowDocentesPrimaria] = useState(false);
   const [showDocentesSecundaria, setShowDocentesSecundaria] = useState(false);
   const [showPersonalApoyo, setShowPersonalApoyo] = useState(false);
+  const [showPersonalAdministrativo, setShowPersonalAdministrativo] = useState(false);
   
   const staff = [
     { name: "Luz Jackelin Sanchez Solorzano", role: "Rectora", initials: "LJS" },
@@ -92,6 +93,11 @@ export default function PlantaInstitucional() {
     { name: "Patricia", role: "Personal de Apoyo", initials: "P", image: patriciaImage, translateY: "-translate-y-8" },
     { name: "Marcela", role: "Personal de Apoyo", initials: "M", image: marcelaImage, translateY: "-translate-y-4" },
     { name: "Luz Elena", role: "Personal de Apoyo", initials: "LE", image: luElenaImage, translateY: "-translate-y-4" }
+  ];
+
+  const personalAdministrativo = [
+    { name: "Marisol", role: "Personal Administrativo", initials: "M", image: undefined, translateY: undefined },
+    { name: "Karol", role: "Personal Administrativo", initials: "K", image: undefined, translateY: undefined }
   ];
 
   return (
@@ -192,7 +198,11 @@ export default function PlantaInstitucional() {
               </CardContent>
             </Card>
 
-            <Card className="hover-elevate">
+            <Card 
+              className="hover-elevate cursor-pointer"
+              onClick={() => setShowPersonalAdministrativo(true)}
+              data-testid="card-personal-administrativo"
+            >
               <CardHeader>
                 <div className="w-12 h-12 rounded-full bg-chart-4 flex items-center justify-center mb-3">
                   <Briefcase className="w-6 h-6 text-white" />
@@ -200,7 +210,7 @@ export default function PlantaInstitucional() {
                 <CardTitle>Personal Administrativo</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-3xl font-bold text-foreground mb-2">8</p>
+                <p className="text-3xl font-bold text-foreground mb-2">2</p>
                 <p className="text-muted-foreground">
                   Equipo dedicado a la gestión y servicios institucionales
                 </p>
@@ -285,6 +295,37 @@ export default function PlantaInstitucional() {
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {personalApoyo.map((person) => (
+                <Card key={person.name} className="hover-elevate">
+                  <CardContent className="pt-4">
+                    <div className="flex flex-col items-center text-center">
+                      <Avatar className="w-16 h-16 mb-3 overflow-hidden">
+                        {person.image && <AvatarImage src={person.image} alt={person.name} className={`object-cover w-full h-full scale-[2] ${person.translateY || '-translate-y-8'}`} />}
+                        <AvatarFallback className="bg-chart-2 text-white text-sm font-semibold">
+                          {person.initials}
+                        </AvatarFallback>
+                      </Avatar>
+                      <h4 className="font-semibold text-foreground text-sm">{person.name}</h4>
+                      <p className="text-xs text-muted-foreground">{person.role}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={showPersonalAdministrativo} onOpenChange={setShowPersonalAdministrativo}>
+        <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold">Personal Administrativo</DialogTitle>
+          </DialogHeader>
+          <div className="mt-4">
+            <p className="text-muted-foreground mb-6">
+              Nuestro equipo administrativo está dedicado a la gestión y servicios institucionales.
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {personalAdministrativo.map((person) => (
                 <Card key={person.name} className="hover-elevate">
                   <CardContent className="pt-4">
                     <div className="flex flex-col items-center text-center">
