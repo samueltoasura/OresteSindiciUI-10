@@ -9,6 +9,7 @@ import coordinadorImage from "@assets/coordinador_1762976498636.png";
 import diegoImage from "@assets/diego_1762977008002.png";
 import jhonathanImage from "@assets/jhonatan_1762977247754.png";
 import narethImage from "@assets/nareth_1762977370937.png";
+import nelsonImage from "@assets/nelson_1762977483270.png";
 
 export default function PlantaInstitucional() {
   const [showDocentesPrimaria, setShowDocentesPrimaria] = useState(false);
@@ -32,7 +33,7 @@ export default function PlantaInstitucional() {
     { name: "Jhonathan Chacon", subject: "602", initials: "JC", image: jhonathanImage, translateY: "-translate-y-4" },
     { name: "Jesus Ivan Verano", subject: "603", initials: "JIV" },
     { name: "Nareth Perez", subject: "701", initials: "NP", image: narethImage, translateY: "-translate-y-6" },
-    { name: "Nelson Miranda", subject: "702", initials: "NM" },
+    { name: "Nelson Miranda", subject: "702", initials: "NM", image: nelsonImage, translateY: "-translate-y-4" },
     { name: "Janeth Rojas Lievano", subject: "703", initials: "JRL" },
     { name: "Cruz Maria Cruz Huertas", subject: "801", initials: "CMCH" },
     { name: "Carolina Amaya Bustos", subject: "802", initials: "CAB" },
