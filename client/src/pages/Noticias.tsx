@@ -9,6 +9,8 @@ import type { LucideIcon } from "lucide-react";
 import competenciaImage from "@assets/Imagen de WhatsApp 2025-11-10 a las 09.40.52_af06f7a6_1763005432692.jpg";
 import isabela1Image from "@assets/image_1763007112215.png";
 import isabela2Image from "@assets/image_1763007122758.png";
+import boletines1Image from "@assets/image_1763007225642.png";
+import boletines2Image from "@assets/image_1763007241342.png";
 
 interface Comunicado {
   title: string;
@@ -72,7 +74,8 @@ export default function Noticias() {
       date: "29 de Octubre, 2025",
       icon: Star,
       summary: "Información sobre la entrega de boletines del tercer periodo académico.",
-      fullContent: "Se informa a toda la comunidad educativa que la entrega de boletines correspondientes al tercer periodo académico se realizará en las instalaciones de la escuela Policarpa Salavarrieta del Colegio Oreste Sindici. Los padres de familia y acudientes podrán recibir los informes académicos de sus hijos donde se refleja el desempeño y avance durante este periodo. Agradecemos la asistencia puntual de los padres de familia y su compromiso con el proceso educativo de nuestros estudiantes."
+      fullContent: "Se informa a toda la comunidad educativa que la entrega de boletines correspondientes al tercer periodo académico se realizará en las instalaciones de la escuela Policarpa Salavarrieta del Colegio Oreste Sindici. Los padres de familia y acudientes podrán recibir los informes académicos de sus hijos donde se refleja el desempeño y avance durante este periodo. Agradecemos la asistencia puntual de los padres de familia y su compromiso con el proceso educativo de nuestros estudiantes.",
+      images: [boletines1Image, boletines2Image]
     },
     {
       title: "Apoyo a nuestra estudiante Isabela Cruz Morales en el Nacional de Karate Do",
