@@ -24,6 +24,11 @@ import soniaImage from "@assets/sonia_1762982033938.png";
 import marlenImage from "@assets/marlen_1762982127814.png";
 import eduardoImage from "@assets/eduardo_1762982353725.png";
 import jaquelineImage from "@assets/jaquelin policarpa_1762982867621.png";
+import edgarImage from "@assets/edgar escueela_1762982921122.png";
+import armandoImage from "@assets/armando escuel_1762982931807.png";
+import yolandaImage from "@assets/yolanda escu_1762982954362.png";
+import nohoraImage from "@assets/nohora escuela_1762982964581.png";
+import esperanzaImage from "@assets/esperanza_1762982977725.png";
 import janethImage from "@assets/janeth_1762979340795.png";
 
 export default function PlantaInstitucional() {
@@ -37,10 +42,11 @@ export default function PlantaInstitucional() {
 
   const docentesPrimaria = [
     { name: "Jaqueline Salazar Alvarado", subject: "Transición", initials: "JSA", image: jaquelineImage, translateY: "-translate-y-6" },
-    { name: "Carlos Fernández Silva", subject: "2° Grado", initials: "CFS" },
-    { name: "Ana Beatriz Torres", subject: "3° Grado", initials: "ABT" },
-    { name: "Jorge Luis Mendoza", subject: "4° Grado", initials: "JLM" },
-    { name: "Patricia Ramírez Castro", subject: "5° Grado", initials: "PRC" }
+    { name: "Carlos Fernández Silva", subject: "2° Grado", initials: "CFS", image: edgarImage, translateY: "-translate-y-6" },
+    { name: "Ana Beatriz Torres", subject: "3° Grado", initials: "ABT", image: armandoImage, translateY: "-translate-y-6" },
+    { name: "Jorge Luis Mendoza", subject: "4° Grado", initials: "JLM", image: yolandaImage, translateY: "-translate-y-6" },
+    { name: "Patricia Ramírez Castro", subject: "5° Grado", initials: "PRC", image: nohoraImage, translateY: "-translate-y-6" },
+    { name: "Esperanza Docente", subject: "1° Grado", initials: "ED", image: esperanzaImage, translateY: "-translate-y-6" }
   ];
 
   const docentesSecundaria = [
