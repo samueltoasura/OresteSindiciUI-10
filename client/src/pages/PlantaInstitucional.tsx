@@ -49,7 +49,7 @@ export default function PlantaInstitucional() {
     { name: "Nareth Perez", subject: "701", initials: "NP", image: narethImage, translateY: "-translate-y-6" },
     { name: "Nelson Miranda", subject: "702", initials: "NM", image: nelsonImage, translateY: "-translate-y-4" },
     { name: "Janeth Rojas Lievano", subject: "703", initials: "JRL", image: janethImage, translateY: "-translate-y-4" },
-    { name: "Cruz Maria Huertas", subject: "801", initials: "CMH", image: cruzMariaImage, translateY: "-translate-y-6" },
+    { name: "Cruz Maria Hortua", subject: "801", initials: "CMH", image: cruzMariaImage, translateY: "-translate-y-6" },
     { name: "Carolina Amaya Bustos", subject: "802", initials: "CAB", image: carolinaImage, translateY: "-translate-y-6" },
     { name: "Martin Honorio Castro", subject: "803", initials: "MHC", image: martinImage, translateY: "-translate-y-6" },
     { name: "Sandra Yamileth Cubillos", subject: "901", initials: "SYC", image: sandraImage, translateY: "-translate-y-4" },
