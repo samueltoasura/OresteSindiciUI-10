@@ -101,15 +101,17 @@ export default function Noticias() {
       <main className="flex-1 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* Sección de Comunicados */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Comunicados</h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Anuncios importantes para la comunidad educativa.
+          <div className="mb-8">
+            <h2 className="text-3xl font-bold text-foreground mb-4">Comunicados y Noticias</h2>
+            <p className="text-lg text-muted-foreground">
+              Mantente informado sobre anuncios importantes y los eventos más recientes de nuestra institución.
             </p>
+          </div>
 
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            {/* Sección de Comunicados */}
             <Card 
-              className="hover-elevate cursor-pointer transition-all max-w-2xl"
+              className="hover-elevate cursor-pointer transition-all"
               onClick={() => setIsComunicadosOpen(true)}
               data-testid="button-open-comunicados"
             >
@@ -121,7 +123,7 @@ export default function Noticias() {
                   <div className="flex-1">
                     <CardTitle className="text-2xl">Ver Comunicados</CardTitle>
                     <CardDescription className="text-base mt-2">
-                      Haz click aquí para ver todos los comunicados institucionales
+                      Anuncios institucionales
                     </CardDescription>
                   </div>
                 </div>
@@ -132,17 +134,10 @@ export default function Noticias() {
                 </p>
               </CardContent>
             </Card>
-          </div>
 
-          {/* Sección de Noticias */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Últimas Noticias</h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Mantente informado sobre los eventos y logros más recientes de nuestra institución.
-            </p>
-
+            {/* Sección de Noticias */}
             <Card 
-              className="hover-elevate cursor-pointer transition-all max-w-2xl"
+              className="hover-elevate cursor-pointer transition-all"
               onClick={() => setIsNoticiasOpen(true)}
               data-testid="button-open-noticias"
             >
@@ -154,7 +149,7 @@ export default function Noticias() {
                   <div className="flex-1">
                     <CardTitle className="text-2xl">Ver Noticias</CardTitle>
                     <CardDescription className="text-base mt-2">
-                      Haz click aquí para ver todas las noticias de la institución
+                      Eventos y logros recientes
                     </CardDescription>
                   </div>
                 </div>
