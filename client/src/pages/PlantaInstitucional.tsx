@@ -21,6 +21,7 @@ import samuelImage from "@assets/samuel tosa_1762981503479.png";
 import sandraImage from "@assets/sandra_1762981805668.png";
 import leonardoImage from "@assets/leonardo_1762981918861.png";
 import soniaImage from "@assets/sonia_1762982033938.png";
+import marlenImage from "@assets/marlen_1762982127814.png";
 import janethImage from "@assets/janeth_1762979340795.png";
 
 export default function PlantaInstitucional() {
@@ -58,7 +59,7 @@ export default function PlantaInstitucional() {
     { name: "Samuel Toasura Torra", subject: "1101", initials: "STT", image: samuelImage, translateY: "-translate-y-6" },
     { name: "Leonardo Peralta", subject: "1102", initials: "LP", image: leonardoImage, translateY: "-translate-y-6" },
     { name: "Sonia Yaned Porras", subject: "1103", initials: "SYP", image: soniaImage, translateY: "-translate-y-6" },
-    { name: "Marlen Constansa Pardo", subject: "Docente", initials: "MCP" },
+    { name: "Marlen Constansa Pardo", subject: "Docente", initials: "MCP", image: marlenImage, translateY: "-translate-y-6" },
     { name: "Eduardo Martinez Bautista", subject: "Docente", initials: "EMB" },
     { name: "Leonidas Lara", subject: "Docente", initials: "LL" }
   ];
