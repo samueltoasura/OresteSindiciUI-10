@@ -189,9 +189,6 @@ export default function PlantaInstitucional() {
               </CardHeader>
               <CardContent>
                 <p className="text-3xl font-bold text-foreground mb-2">4</p>
-                <p className="text-muted-foreground">
-                  Psicólogos, orientadores y personal especializado
-                </p>
               </CardContent>
             </Card>
 
