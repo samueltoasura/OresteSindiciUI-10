@@ -20,7 +20,7 @@ const slides = [
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[220px] md:h-[260px] overflow-hidden">
+    <section className="relative h-[250px] md:h-[300px] overflow-hidden">
       <Carousel
         opts={{
           align: "start",
@@ -33,7 +33,7 @@ export default function HeroSection() {
         ]}
         className="h-full"
       >
-        <CarouselContent className="h-[220px] md:h-[260px]">
+        <CarouselContent className="h-[250px] md:h-[300px]">
           {slides.map((slide) => (
             <CarouselItem key={slide.id} className="relative h-full">
               <img 
@@ -67,14 +67,6 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-3 flex z-10">
-        <div className="flex-1 bg-black opacity-60" />
-        <div className="flex-1 bg-destructive opacity-90" />
-        <div className="flex-1 bg-chart-4 opacity-90" />
-        <div className="flex-1 bg-chart-1 opacity-90" />
-        <div className="flex-1 bg-chart-3 opacity-90" />
-        <div className="flex-1 bg-chart-2 opacity-90" />
-      </div>
     </section>
   );
 }
