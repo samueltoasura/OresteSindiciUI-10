@@ -73,16 +73,16 @@ export default function NavigationButtons() {
               data-testid={`link-${button.id}`}
             >
               <div className={`
-                w-22 h-22 md:w-26 md:h-26 rounded-full ${button.color} 
+                w-24 h-24 md:w-28 md:h-28 rounded-full ${button.color} 
                 flex items-center justify-center
                 transition-all duration-300 ease-out
                 group-hover:scale-110 group-hover:shadow-2xl
                 group-active:scale-105
                 shadow-lg
               `}>
-                <button.icon className="w-9 h-9 md:w-11 md:h-11 text-white" />
+                <button.icon className="w-10 h-10 md:w-12 md:h-12 text-white" />
               </div>
-              <h3 className="mt-3 text-sm md:text-base font-semibold text-foreground text-center group-hover:text-primary transition-colors px-1">
+              <h3 className="mt-3 text-sm md:text-base font-semibold text-foreground text-center group-hover:text-primary transition-colors">
                 {button.title}
               </h3>
             </Link>
