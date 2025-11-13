@@ -20,7 +20,7 @@ const slides = [
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[280px] md:h-[320px] overflow-hidden">
+    <section className="relative h-[220px] md:h-[260px] overflow-hidden">
       <Carousel
         opts={{
           align: "start",
@@ -33,7 +33,7 @@ export default function HeroSection() {
         ]}
         className="h-full"
       >
-        <CarouselContent className="h-[280px] md:h-[320px]">
+        <CarouselContent className="h-[220px] md:h-[260px]">
           {slides.map((slide) => (
             <CarouselItem key={slide.id} className="relative h-full">
               <img 
