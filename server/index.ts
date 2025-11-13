@@ -1,21 +1,30 @@
-import express, { type Request, Response, NextFunction } from "express";
+import express, { Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import path from "path";
 
 const app = express();
 
-declare module 'http' {
+// ---------------------------------------------------------------------
+// Middleware para capturar el body sin procesar (útil para webhooks u otros usos)
+declare module "http" {
   interface IncomingMessage {
-    rawBody: unknown
+    rawBody?: Buffer;
   }
 }
-app.use(express.json({
-  verify: (req, _res, buf) => {
-    req.rawBody = buf;
-  }
-}));
+
+app.use(
+  express.json({
+    verify: (req, _res, buf) => {
+      req.rawBody = buf;
+    },
+  })
+);
+
 app.use(express.urlencoded({ extended: false }));
 
+// ---------------------------------------------------------------------
+// Middleware de logging básico de API
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
@@ -34,11 +43,9 @@ app.use((req, res, next) => {
       if (capturedJsonResponse) {
         logLine += ` :: ${JSON.stringify(capturedJsonResponse)}`;
       }
-
-      if (logLine.length > 80) {
-        logLine = logLine.slice(0, 79) + "…";
+      if (logLine.length > 120) {
+        logLine = logLine.slice(0, 119) + "…";
       }
-
       log(logLine);
     }
   });
@@ -46,36 +53,45 @@ app.use((req, res, next) => {
   next();
 });
 
+// ---------------------------------------------------------------------
+// Inicialización del servidor
 (async () => {
   const server = await registerRoutes(app);
 
+  // Manejo global de errores
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
-    const status = err.status || err.statusCode || 500;
+    const status = err.status || 500;
     const message = err.message || "Internal Server Error";
-
+    console.error("Server error:", err);
     res.status(status).json({ message });
-    throw err;
   });
 
-  // importantly only setup vite in development and after
-  // setting up all the other routes so the catch-all route
-  // doesn't interfere with the other routes
+  // -----------------------------------------------------------------
+  // Configuración según el entorno
   if (app.get("env") === "development") {
+    // Modo desarrollo: usa Vite para recarga en caliente
     await setupVite(app, server);
   } else {
+    // Modo producción: sirve los archivos estáticos generados
     serveStatic(app);
+
+    // Servir el index.html del frontend para cualquier ruta no-API
+    app.get("*", (_req, res) => {
+      res.sendFile(path.resolve("dist/index.html"));
+    });
   }
 
-  // ALWAYS serve the app on the port specified in the environment variable PORT
-  // Other ports are firewalled. Default to 5000 if not specified.
-  // this serves both the API and the client.
-  // It is the only port that is not firewalled.
-  const port = parseInt(process.env.PORT || '5000', 10);
-  server.listen({
-    port,
-    host: "0.0.0.0",
-    reusePort: true,
-  }, () => {
-    log(`serving on port ${port}`);
-  });
+  // -----------------------------------------------------------------
+  // Escuchar en el puerto configurado (importante para Vercel)
+  const port = parseInt(process.env.PORT || "5000", 10);
+  server.listen(
+    {
+      port,
+      host: "0.0.0.0",
+      reusePort: true,
+    },
+    () => {
+      log(`🚀 Servidor ejecutándose en http://localhost:${port}`);
+    }
+  );
 })();
