@@ -105,3 +105,16 @@
     "bufferutil": "^4.0.8"
   }
 }
+{
+  "scripts": {
+    "build": "vite build",
+    "start": "node dist/server/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "typescript": "^5.0.0"
+  }
+}
