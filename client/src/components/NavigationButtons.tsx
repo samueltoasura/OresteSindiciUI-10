@@ -56,7 +56,7 @@ const navigationButtons: NavButton[] = [
 
 export default function NavigationButtons() {
   return (
-    <section className="py-8 md:py-12 bg-background">
+    <section className="py-8 md:py-12 bg-background pb-16 md:pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
@@ -69,7 +69,7 @@ export default function NavigationButtons() {
             <Link 
               key={button.id} 
               href={button.path}
-              className="flex flex-col items-center group"
+              className="flex flex-col items-center group pb-4"
               data-testid={`link-${button.id}`}
             >
               <div className={`
@@ -82,7 +82,7 @@ export default function NavigationButtons() {
               `}>
                 <button.icon className="w-10 h-10 md:w-12 md:h-12 text-white" />
               </div>
-              <h3 className="mt-3 text-sm md:text-base font-semibold text-foreground text-center group-hover:text-primary transition-colors">
+              <h3 className="mt-4 text-sm md:text-base font-semibold text-foreground text-center group-hover:text-primary transition-colors min-h-[2.5rem] md:min-h-[3rem] flex items-center px-2">
                 {button.title}
               </h3>
             </Link>
