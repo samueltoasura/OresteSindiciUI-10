@@ -20,7 +20,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Verifica que esta ruta sea EXACTA a la de tus carpetas
-          path: 'client'
+          path: 'dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
